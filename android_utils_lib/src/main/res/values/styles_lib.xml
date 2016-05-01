@@ -1,0 +1,21 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Apenas Numero -->
+	<style name="numero">
+		<item name="android:singleLine">true</item>		
+		<item name ="android:inputType">phone</item>
+		<item name ="android:digits">1234567890</item>
+	</style>
+	
+	<!-- Senha -->
+	<style name="senhaAlfa">
+		<item name="android:singleLine">true</item>
+		<item name="android:password">true</item>
+	</style>
+	
+	<!-- Senha -->
+	<style name="senha" parent="numero">
+		<item name="android:password">true</item>
+	</style>
+
+</resources>

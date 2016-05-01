@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="azul_pagcom">#33CCFF</color>
+    <color name="bg_azulzinho">#7FE4F6</color>
+	<color name="transparente">#00000000</color>
+	<color name="fundo">#000000</color>
+	<color name="laranja">#FF9933</color>
+	<color name="amarelo">#FFFF00</color>
+	<color name="azul">#00A1C9</color>
+	<color name="azul_escuro">#0000ff</color>
+	<color name="cyan">#00ffff</color>
+	<color name="branco">#ffffff</color>
+	<color name="cinza_claro">#E8E8E8</color>
+	<color name="cinza_muito_claro">#EEEEEE</color>
+	<color name="cinza">#CDCDC1</color>
+	<color name="cinza_escuro">#1C1C1C</color>
+	<color name="preto">#000000</color>
+	<color name="pink">#FC71D4</color>
+	<color name="verde">#00ff00</color>
+	<color name="verde_escuro">#0B850E</color>
+	<color name="vermelho">#ff0000</color>
+	<color name="vermelho_escuro">#771700</color>
+	<color name="laranja_conectcar">#EC8013</color>
+	<color name="azul_cielo">#00a2d7</color>
+	<color name="azul_redecard">#183c8e</color>
+	<color name="laranja_rede">#ea7125</color>
+	<color name="amarelo_rede">#ffe62d</color>
+	<color name="redefield_color">#222222</color>
+	<color name="roxo">#9933CC</color>
+</resources>

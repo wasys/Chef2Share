@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_chef"
+    android:orientation="vertical"
+
+    >
+
+    <include layout="@layout/include_header_com_subtitulo" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_chef"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/card_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:elevation="8dp"
+                        card_view:cardCornerRadius="4dp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/bg_chef"
+                            android:orientation="vertical">
+
+                            <include layout="@layout/include_dados_chef_comprar_evento" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/branco"
+                                android:orientation="vertical"
+                                android:padding="@dimen/margin">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:src="@drawable/ic_chapeu_chef_verde" />
+
+                                        <TextView
+                                            android:id="@+id/txtTituloEvento"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="8dp"
+                                            android:autoLink="all"
+                                            android:ellipsize="end"
+                                            android:singleLine="true"
+                                            android:text="*"
+                                            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                                            android:textColor="@color/chef_cinza_escuro" />
+                                    </LinearLayout>
+
+
+                                    <LinearLayout
+                                        android:id="@+id/addEventoCalendario"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:gravity="center|left"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:src="@drawable/ic_calendario_verde" />
+
+
+                                        <TextView
+                                            android:id="@+id/txtData"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="8dp"
+                                            android:autoLink="all"
+                                            android:ellipsize="end"
+                                            android:singleLine="true"
+                                            android:text="*"
+                                            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                                            android:textColor="@color/chef_cinza_escuro" />
+
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_vertical|left"
+                                            android:orientation="horizontal">
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:src="@drawable/ic_valor_verde" />
+
+
+                                            <TextView
+                                                android:id="@+id/txtValorEvento"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="8dp"
+                                                android:ellipsize="end"
+                                                android:singleLine="true"
+                                                android:text="*"
+                                                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                                                android:textColor="@color/chef_cinza_escuro" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+                                            <LinearLayout
+                                                android:id="@+id/layoutVerConvites"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="bottom|right"
+                                                android:orientation="horizontal"
+                                                android:visibility="gone">
+
+                                                <Button
+                                                    android:id="@+id/btnVerConvites"
+                                                    style="@style/btn_simples_azul_small"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="@string/btn_ver_convites" />
+
+
+                                            </LinearLayout>
+
+
+                                            <LinearLayout
+                                                android:id="@+id/layoutPagarAgora"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="8dp"
+                                                android:gravity="center"
+                                                android:orientation="horizontal">
+
+                                                <Button
+                                                    android:id="@+id/btnPagarAgora"
+                                                    style="@style/btn_simples_vermelho_small"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="right|bottom"
+                                                    android:text="@string/btn_pagar_agora" />
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:id="@+id/layoutAvalie"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center"
+                                                android:orientation="horizontal">
+
+                                                <Button
+                                                    android:id="@+id/btnAvalie"
+                                                    style="@style/btn_simples_amarelo_small"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="@string/btn_avalie" />
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:id="@+id/layoutEventoAvaliado"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center"
+                                                android:orientation="horizontal">
+
+                                                <RatingBar
+                                                    android:id="@+id/ratingAvaliacaoEvento"
+                                                    style="@style/RatingBarSmallratting_start"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:rating="5" />
+
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:id="@+id/layoutAguardandoPagamento"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="@string/aguardando_pagamento"
+                                                    android:textColor="@color/bt_simples_vermelho_on" />
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:id="@+id/layoutPagamentoEfetuado"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="@string/pagamento_efetuado"
+                                                    android:textColor="@color/chef_verde_limao" />
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/layoutConvites"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin"
+                        android:elevation="8dp"
+                        card_view:cardCornerRadius="4dp">
+
+
+                        <LinearLayout
+                            android:id="@+id/layoutAddConvites"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/branco"
+                            android:orientation="vertical" />
+
+                    </android.support.v7.widget.CardView>
+
+
+                    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin"
+                        android:elevation="8dp"
+                        card_view:cardCornerRadius="4dp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/branco"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/margin">
+
+                                <ImageView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_mapa_verde" />
+
+                                <TextView
+                                    android:id="@+id/txtNomeLocal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:ellipsize="end"
+                                    android:singleLine="true"
+                                    android:text="*"
+                                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                                    android:textColor="@color/chef_cinza_escuro" />
+                            </LinearLayout>
+
+                            <View
+
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginLeft="@dimen/margin"
+                                android:layout_marginRight="@dimen/margin"
+                                android:background="@color/cinza_claro" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginLeft="@dimen/margin"
+                                android:layout_marginRight="@dimen/margin"
+                                android:layout_marginTop="8dp"
+                                android:layout_weight="1"
+                                android:gravity="center|left"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/txtEnderecoLocal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:maxLines="2"
+                                    android:text="*"
+                                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                                    android:textColor="@color/chef_laranja" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <fragment
+                                    android:id="@+id/map"
+                                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="400dp" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutAguarde"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/bg_chef"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <ProgressBar
+                        style="@android:style/Widget.ProgressBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

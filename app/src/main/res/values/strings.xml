@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- A -->
+    <string name="app_name">Chef2Share</string>
+    <string name="avaliar">Avaliar</string>
+    <string name="avaliacoes">Avaliações</string>
+    <string name="avaliacao_atendimento">Atendimento</string>
+    <string name="avaliacao_comentarios">Comentários</string>
+    <string name="avaliacao_comida">Comida</string>
+    <string name="avaliacao_local">Local</string>
+    <string name="aguardando_pagamento">Aguardando o pagamento</string>
+
+    <!-- B -->
+    <string name="btn_entrar">Entrar</string>
+    <string name="btn_cadastrar">Cadastrar</string>
+    <string name="btn_salvar">Salvar</string>
+    <string name="btn_alterar_senha">Alterar senha</string>
+    <string name="btn_google_plus_logout">Sair</string>
+    <string name="btn_buscar_e_comprar_evento">Buscar e comprar um evento</string>
+    <string name="btn_criar_gerenciar_evento">Criar e gerenciar um evento</string>
+    <string name="btn_procurar_eventos">PROCURAR EVENTOS</string>
+    <string name="btn_mostrar_filtros">Mostrar filtros</string>
+    <string name="btn_filtrar">Filtrar</string>
+    <string name="btn_salvar_filtros">Salvar filtros</string>
+    <string name="btn_comprar">Comprar</string>
+    <string name="btn_agende_evento_exclusico">Agende um evento exclusivo</string>
+    <string name="btn_compartilhe">Compartilhe</string>
+    <string name="btn_fale_com_anfitriao">Fale com o anfitrião</string>
+    <string name="btn_ver_convites">Ver convites</string>
+    <string name="btn_pagar_agora">Pagar agora</string>
+    <string name="btn_avalie">Avalie</string>
+    <string name="btn_refazer_busca_regiao">refazer busca na região</string>
+    <string name="btn_cadastrar_novo_local">+ cadastrar um novo local</string>
+    <string name="btn_ir_para_eventos_que_vou">Eventos que vou</string>
+    <string name="btn_add_fotos_local">&#160;&#160;adicionar fotos do local</string>
+    <string name="btn_add_fotos_cardapio">&#160;&#160;adicionar fotos do cardápio</string>
+    <string name="btn_proximo">Próximo</string>
+    <string name="btn_cadastrar_novo_cardapio">+ cadastrar um novo cardápio</string>
+    <string name="btn_checar_convite">Checar convite</string>
+    <string name="btn_editar">Editar</string>
+    <string name="btn_publicar_evento">Publicar evento</string>
+    <string name="btn_divulgar_evento">Divulgar evento</string>
+    <string name="btn_confirmar_checkin">Confirmar checkin</string>
+
+
+    <string name="busca_tipo_evento">Tipo do evento</string>
+    <string name="busca_tipo_cozinha">Tipo de cozinha</string>
+    <string name="busca_valor_maximo">Valor máximo</string>
+    <string name="busca_data_inicio">Data início</string>
+    <string name="busca_data_final">Data final</string>
+    <string name="bebidas">Bebidas</string>
+    <!-- C -->
+    <string name="cancelar">Cancelar</string>
+    <string name="com_facebook_send_button_text">Enviar</string>
+    <string name="com_facebook_share_button_text">Compartilhar</string>
+    <string name="cadastre_se"><u>Cadastre-se</u></string>
+    <string name="cadastre_se_com">Cadastre-se com </string>
+    <string name="cadastre_se_com_google"><u>Google+</u></string>
+    <string name="cadastre_se_com_facebook"><u>Facebook</u></string>
+    <string name="cadastro_meus_dados">Meus dados</string>
+    <string name="cadastro_nome">Nome</string>
+    <string name="cadastro_sobrenome">Sobrenome</string>
+    <string name="cadastro_genero">Gênero</string>
+    <string name="cadastro_data_nascimento">Data de nascimento</string>
+    <string name="cadastro_email">E-mail*</string>
+    <string name="cadastro_email_nao_obrigatorio">E-mail</string>
+    <string name="cadastro_documento">Documento</string>
+    <string name="cadastro_nova_senha">Nova senha*</string>
+    <string name="cadastro_confirma_nova_senha">Repetir senha*</string>
+    <string name="cadastro_alterar_senha">Alterar senha</string>
+    <string name="comentarios">comentários</string>
+    <string name="chef">Chef</string>
+    <string name="compra_individual">Individual</string>
+    <string name="compra_duplo">Duplo</string>
+    <string name="compra_total">Total:</string>
+    <string name="criar_evento_passo_um">1</string>
+    <string name="criar_evento_passo_dois">2</string>
+    <string name="criar_evento_passo_tres">3</string>
+    <string name="criar_evento_passo_quatro">4</string>
+    <string name="criar_evento_passo_cinco">5</string>
+    <string name="criar_evento_passo_um_desc">1 - Local</string>
+    <string name="criar_evento_passo_dois_desc">2 - Cardápio</string>
+    <string name="criar_evento_passo_tres_desc">3 - Data e valor</string>
+    <string name="criar_evento_passo_quatro_desc">4</string>
+    <string name="criar_evento_passo_cinco_desc">5</string>
+    <string name="criar_evento_local">Local</string>
+    <string name="criar_evento_cardapio">Cardápio</string>
+    <string name="criar_evento_data_valor">Data/Valor</string>
+    <string name="criar_evento_publique_divulgue">Publique e divulgue</string>
+    <string name="criar_evento_acompanhe">Acompanhe</string>
+    <string name="cadastro_local_nome">Nome do local</string>
+    <string name="cadastro_local_descricao">Descrição</string>
+    <string name="cadastro_local_estacionamento">Estacionamento</string>
+    <string name="cadastro_local_logradouro">Logradouro</string>
+    <string name="cadastro_local_endereco">Endereço</string>
+    <string name="cadastro_local_numero">Número</string>
+    <string name="cadastro_local_cep">CEP</string>
+    <string name="cadastro_local_bairro">Bairro</string>
+    <string name="cadastro_local_cidade">Cidade</string>
+    <string name="cadastro_local_estado">Estado</string>
+    <string name="cadastro_local_informe_local">Digite um local ou CEP</string>
+    <string name="cadastro_cardapio_titulo">Título</string>
+    <string name="cadastro_cardapio_tipo">Tipo</string>
+    <string name="cadastro_cardapio_menu">Menu</string>
+    <string name="cadastro_cardapio_descricao">Descrição</string>
+    <string name="cadastro_cardapio_bebidas">Bebidas</string>
+    <string name="cadastro_cardapio_tipo_cozinha">Tipo de cozinha</string>
+    <string name="cadastro_cardapio_outras_informacoes">Outras informações</string>
+    <string name="cadastro_data_valor_tipo_evento">Tipo de evento</string>
+    <string name="cadastro_data_valor_inicio">Início</string>
+    <string name="cadastro_data_valor_termino">Término</string>
+    <string name="cadastro_data_valor_forma">Forma</string>
+    <string name="cadastro_data_valor_valor">Valor</string>
+    <string name="cadastro_data_valor_numero_max_convidados">Número máximo de convidados</string>
+    <string name="cadastro_data_valor_promocao_duas_pessoas">Promoção para 2 pessoas</string>
+    <string name="cadastro_data_valor_promocao_compra_antecipada">Valor para compra antecipada</string>
+    <string name="cadastro_data_valor_promocional">Valor promocional</string>
+    <string name="cadastro_data_valor_data_compra_antecipada">Data limite</string>
+    <string name="cadastro_data_valor_politica_cancelamento">Política de cancelamento</string>
+    <string name="cadastro_data_valor_politica_nao_comparecimento">Política de não comparecimento</string>
+
+    <!-- D -->
+    <string name="data">Data:</string>
+    <string name="descricao">Descrição</string>
+    <string name="detalhes">Detalhes</string>
+
+    <!-- E -->
+    <string name="entrar_com">Entrar com</string>
+    <string name="evento">Evento:</string>
+    <string name="evento_realizado">Evento Realizado</string>
+    <string name="evento_quantidade_localizados">Foram localizados %1$d eventos.</string>
+    <string name="enviar">Enviar</string>
+
+    <!-- F -->
+    <string name="facebook">Facebook</string>
+    <string name="facebook_app_id">1061925513842281</string>
+    <string name="fotos_local">Fotos do local</string>
+    <string name="foto_principal_destaque">Foto principal para destaque.</string>
+    <string name="foto_divulgacao_emails_redes_sociais">Foto divulgação para emails e redes sociais.</string>
+
+    <!-- G -->
+    <string name="google">Google+</string>
+    <string name="genero_masculino">Masculino</string>
+    <string name="genero_feminino">Feminino</string>
+    <string name="gcm_sender_id">154124496069</string>
+
+    <!-- H -->
+    <string name="hint_nome">Nome</string>
+    <string name="hint_resumo">Resumo</string>
+    <string name="hint_sobrenome">Sobrenome</string>
+    <string name="hint_email">E-mail</string>
+    <string name="hint_senha">Senha</string>
+    <string name="hint_rede_social_facebook">https://www.facebook.com.br</string>
+    <string name="hint_rede_social_google_plus">https://plus.google.com</string>
+    <string name="hint_rede_social_whatsapp">WhatsApp</string>
+    <string name="hint_rede_social_youtube">YouTube</string>
+    <string name="hint_rede_social_twitter">Twitter</string>
+    <string name="hint_rede_social_linkedin">LinkedIn</string>
+    <string name="hint_rede_social_instagram">Instagram</string>
+    <string name="hint_local">Local</string>
+    <string name="hint_local_cep">Nome do local ou CEP</string>
+    <string name="hint_data">--/--/--</string>
+    <string name="hint_digite_o_nome">Digite o nome</string>
+    <string name="hint_digite_a_mensagem">Digite a mensagem...</string>
+    <string name="hint_descricao_cardapio">Ex: Entrada: Misto de Folhas Verdes.  Prato Principal: Ostras gratinadas com arroz... Sobremesa: Abacaxi Flambado com Conhaque</string>
+
+    <!-- I -->
+    <string name="infra_msg_aguarde">Aguarde …</string>
+    <string name="infra_msg_network_indisponivel">Conexão de dados indisponível no momento. Verifique suas configurações de rede e tente novamente.</string>
+    <string name="infra_msg_erro_sql">Ocorreu um erro ao processar comando sql.</string>
+    <string name="infra_msg_erro_io">Erro de comunicação com o servidor.</string>
+    <string name="infra_msg_erro">Ocorreu um erro ao processar a transação.\nPor favor tentar novamente.</string>
+    <string name="infra_msg_erro_timeout">Tempo de espera esgotado. Por favor tente novamente.</string>
+    <string name="infra_msg_retorno_invalido_servidor">Retorno inválido do servidor. Por favor, tente novamente.</string>
+    <string name="infra_msg_retorno_vazio_servidor">Nenhuma informação retornada pelo servidor. Por favor, tente novamente.</string>
+    <string name="infra_msg_retorno_http_invalido">Retorno HTTP inválido: %1$s</string>
+    <string name="indicador_obrigatorio">*</string>
+    <string name="importante">Importante</string>
+
+    <!-- J -->
+    <string name="ja__e_um_usuario_cheftoshare">Já é um usuário Chef2Share?</string>
+
+    <!-- K -->
+
+    <!-- L -->
+    <string name="login"><u>Login</u></string>
+    <string name="leia_mais">...leia mais</string>
+    <string name="login_erro_google">Ocorreu um erro ao tentar realizar o login pelo Google</string>
+    <string name="lista_de_convidados">Lista de convidados</string>
+
+    <!-- M -->
+    <string name="menu_cadastro">Cadastro</string>
+    <string name="menu_perfil">Perfil</string>
+    <string name="menu_perfil_buscar_eventos">Buscar eventos</string>
+    <string name="menu_perfil_convide_chef">Convide um chef</string>
+    <string name="menu_perfil_eventos_que_vou">Eventos que vou</string>
+    <string name="menu_perfil_mensagens">Mensagens</string>
+    <string name="menu_perfil_ajuda">Ajuda</string>
+    <string name="menu_perfil_sair">Sair</string>
+    <string name="menu_perfil_chef">Perfil do chef</string>
+    <string name="menu_criar_um_evento">Criar um evento</string>
+    <string name="menu_eventos_que_ofereco">Eventos que ofereço</string>
+    <string name="msg_validacao_nome">Informe o nome</string>
+    <string name="msg_validacao_email">Informe o e-email</string>
+    <string name="msg_validacao_senha">Informe a senha</string>
+    <string name="msg_validacao_senha_confirmacao">Informe novamente a senha</string>
+    <string name="msg_validacao_qtde_ingressos">Informe a quantidade desejada de ingressos</string>
+    <string name="msg_senha_alterada_com_sucesso">Senha alterada com sucesso</string>
+    <string name="msg_nenhum_evento_localizado">Nenhum evento localizado</string>
+    <string name="msg_dados_atualizados_com_sucesso">Dados atualizados com sucesso</string>
+    <string name="menu">Menu</string>
+    <string name="no_total">no total</string>
+    <string name="msg_processando_dados_pedido">Obtendo informações da reserva...</string>
+    <string name="msg_aguarde_pagina_pagamento">Carregamento a página de pagamento...</string>
+    <string name="msg_pagamento_realizado_sucesso">Pagamento realizado com sucesso!</string>
+    <string name="msg_avaliacao_enviada_com_sucesso">Avaliação enviada com sucesso!</string>
+    <string name="msg_confirma_envio_avaliacao">A avaliação será salva. Deseja continuar?</string>
+    <string name="msg_confirma_deletar_foto">A foto será excluída. Deseja continuar?</string>
+    <string name="msg_validacao_logradouro">Informe o logradouro</string>
+    <string name="msg_validacao_cep">Informe o cep</string>
+    <string name="msg_validacao_bairro">Informe o bairro</string>
+    <string name="msg_validacao_cidade">Informe a cidade</string>
+    <string name="msg_validacao_estado">Informe o estado</string>
+    <string name="msg_informe_dados_local">Informe os dados do local para avançar</string>
+    <string name="msg_informe_dados_cardapio">Informe os dados do cardápio para avançar</string>
+    <string name="msg_aguarde_carregando_meus_locais_cardapios">Carregando meus locais e cardápios...</string>
+    <string name="msg_confirma_meu_local">O evento será realizado no local: %1$s. Deseja continuar?</string>
+    <string name="msg_confirma_meu_cardapio">O cardápio: %1$s estará disponível no evento. Deseja continuar?</string>
+    <string name="msg_aguarde_upload_imagem_local">Salvando foto do local, aguarde... </string>
+    <string name="msg_aguarde_salvando_local_evento">Salvando local do evento, aguarde... </string>
+    <string name="msg_aguarde_deletando_imgem_local">Deletando foto do local, aguarde...</string>
+    <string name="msg_aguarde_carregando_mensagens">Carregando lista de mensagens, aguarde... </string>
+    <string name="msg_voce_nao_tem_msg">Você não tem nenhuma mensagem.</string>
+    <string name="msg_aguarde_carregando_detalhes_evento">Carregando detalhes do evento, aguarde...</string>
+    <string name="msg_aguarde_carregando_mensagem">Carregando histórico da mensagem, aguarde...</string>
+    <string name="msg_menssagem_obrigatoria">Informe a mensagem</string>
+    <string name="msg_confirma_envio_msg">A mensagem será enviada para o destinatário. Deseja continuar?</string>
+    <string name="msg_mensagem_enviada_com_sucesso">Mensagem enviada com sucesso.</string>
+    <string name="msg_aguarde_deletando_imgem_cardapio">Deletando foto do cardápio, aguarde...</string>
+    <string name="msg_aguarde_upload_imagem_cardapio">Salvando foto do cardápio, aguarde... </string>
+    <string name="msg_aguarde_salvando_cardapio">Salvando cardápio, aguarde... </string>
+    <string name="msg_recuperando_dados_evento">Recuperando dados do evento, aguarde... </string>
+    <string name="msg_aguarde_upload_imagem_cadastro">Fazendo upload da imagem, aguarde... </string>
+    <string name="msg_passo_tres_informe_data_compra_antecipada">Informe a data limite para compra antecipada promocional.</string>
+    <string name="msg_passo_tres_data_termino_deve_ser_maior_que_data_inicio">Data de término do evento deve ser maior que a data inicial.</string>
+    <string name="msg_passo_tres_data_antecipada_deve_ser_menor_que_data_do_evento">A data limite para compra antecipada deve ser menor que a data do evento.</string>
+    <string name="msg_aguarde_salvando_dados_evento">Salvando os dados do evento, aguarde...</string>
+    <string name="msg_confirma_publicar_evento">O evento será publicado. Deseja continuar?</string>
+    <string name="msg_aguarde_publicando_evento">O evento esta sendo publicado, aguarde...</string>
+    <string name="msg_aguarde_realizando_checkin">Realizando checkin, aguarde...</string>
+    <string name="msg_aguarde_cancelando_checkin">Desfazendo checkin, aguarde...</string>
+    <string name="msg_atualizando_dados_usuario">Obtendo informaçõs atualizadas, aguarde...</string>
+    <string name="msg_aguarde_carregando_perfil_chef">Obtendo perfil do chef, aguarde...</string>
+    <string name="msg_aguarde_atualizando_perfil_chef">Atualizando perfil do chef, aguarde...</string>
+    <string name="msg_validacao_fluxo_passo">Passo %1$s não foi criado.</string>
+    <string name="msg_checkin_nao_e_possivel">Não é possível realizar o checkin no momento.</string>
+    <string name="msg_checkin_status_invalido">Status inválido para permitir checkin.</string>
+    <string name="msg_entrada_nao_localizada">A entrada [%1$s] não é válida para esse evento.</string>
+    <string name="msgs_checkin_realizado_sucesso">Checkin realizado com sucesso.</string>
+    <string name="msgs_checkin_desfazer_realizado_sucesso">Desfazimento de checkin realizado com sucesso.</string>
+
+    <!-- N -->
+    <string name="nao">Não</string>
+    <string name="nao_informado">não informado</string>
+
+    <!-- O -->
+    <string name="ou"> ou </string>
+    <string name="onde">Onde:</string>
+    <string name="onde_mais_info">Onde</string>
+    <string name="outras_datas_do_mesmo_evento">Outras datas do mesmo evento:</string>
+    <string name="outros_eventos_do_chef">Outros eventos do chef</string>
+    <string name="numero_fornecido_para_quem_comprar">* O número da casa só será  fornecido aos que comprarem.</string>
+
+    <!-- P -->
+    <string name="pagamento_efetuado">Pagamento efetuado</string>
+    <string name="pagos">Pagos</string>
+    <string name="perfil_chef_meus_dados">Perfil do chef</string>
+    <string name="perfil_chef_resumo">Resumo</string>
+    <string name="perfil_chef_tratamento">Tratamento</string>
+    <string name="perfil_chef_local_principal">Local principal</string>
+
+    <!-- Q -->
+    <string name="quando">Quando:</string>
+
+    <!-- R -->
+    <string name="rede_social">Rede social</string>
+    <string name="restam">Restam:</string>
+    <string name="reservados">Reservados</string>
+
+    <!-- S -->
+    <string name="sobre_o_chef">Sobre o chef</string>
+    <string name="sim">Sim</string>
+
+    <!-- T -->
+    <string name="titulo_cadastro">Cadastro</string>
+    <string name="titulo_perfil_chef">Perfil do chef</string>
+    <string name="titulo_buscar_eventos">Buscar Eventos</string>
+    <string name="titulo_buscar_eventos_mapa">Eventos no mapa</string>
+    <string name="titulo_comprar">Comprar</string>
+    <string name="titulo_pagamento">Pagamento</string>
+    <string name="titulo_ajuda">Ajuda</string>
+    <string name="titulo_eventos_que_vou">Eventos que vou</string>
+    <string name="titulo_detalhes_compra">Detalhes da compra</string>
+    <string name="titulo_criar_evento">Crie seu evento</string>
+    <string name="titulo_endereco">Endereço</string>
+    <string name="titulo_mensagens">Mensagens</string>
+    <string name="titulo_eventos_que_ofereco">Eventos que ofereço</string>
+    <string name="titulo_acompanhe">Acompanhe</string>
+    <string name="titulo_termos_de_uso">Termos de uso</string>
+    <string name="termos_de_uso">Ver Termos de uso</string>
+    <string name="texto_info_publicacao">O Chef2Share irá descontar 10% ou R$ 3,50 de cada ingresso comprado a título de intermediação.\n\nA nota fiscal relativa ao evento deverá ser fornecida pelo chef ao convidado no dia da realização do evento. </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- U -->
+
+    <!-- V -->
+    <string name="voce_nao_tem_uma_conta">Você não tem uma conta?</string>
+    <string name="title_activity_mapa">Map</string>
+    <string name="veja_mais_informacoes">Veja mais informações</string>
+    <string name="veja_mais">veja mais</string>
+    <string name="veja_todo_cardapio">veja todo o cardápio</string>
+    <string name="voltar">Voltar</string>
+    <string name="voce_nao_tem_nenhum_evento">Você não possui nenhum evento</string>
+    <string name="visualizados">Visualizados</string>
+
+    <!-- X -->
+
+    <!-- Y -->
+
+    <!-- W -->
+
+    <!-- Z -->
+
+</resources>

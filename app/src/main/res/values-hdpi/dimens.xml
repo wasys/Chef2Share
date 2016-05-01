@@ -1,0 +1,9 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="margin">8dp</dimen>
+    <dimen name="h_header">44dp</dimen>
+    <dimen name="bt_default_item_height">40dp</dimen>
+    <dimen name="h_logo">34dp</dimen>
+    <dimen name="h_img_user">34dp</dimen>
+
+</resources>

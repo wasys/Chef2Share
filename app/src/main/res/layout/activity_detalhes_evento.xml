@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_chef"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/include_header_detalhes_evento" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="false">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_chef"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/branco">
+
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/viewPagerFotosEvento"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <LinearLayout
+                            android:id="@+id/layoutEventoRealizado"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="180dp"
+                            android:background="@drawable/bg_escuro_alpha"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/margin">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:text="@string/evento_realizado"
+                                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+                                android:textColor="@color/branco" />
+                        </LinearLayout>
+
+
+                    </FrameLayout>
+
+                    <br.com.chef2share.view.CirclePageIndicator
+                        android:id="@+id/pageIndicatorEventos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center"
+                        android:background="@color/branco"
+                        android:padding="8dp"
+                        app:fillColor="@color/chef_cinza_claro"
+                        app:pageColor="@color/chef_cinza_escuro" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/branco"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin">
+
+                        <TextView
+                            android:id="@+id/txtTituloEvento"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:text="Título do evento"
+                            android:textColor="@color/chef_cinza_escuro"
+                            android:textSize="30sp" />
+
+                        <LinearLayout
+                            android:id="@+id/layoutEventoFuturo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                style="@style/editText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:background="@color/chef_cinza_escuro"
+                                android:orientation="horizontal"
+                                android:padding="8dp">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:padding="8dp">
+
+                                    <TextView
+                                        android:id="@+id/txtValorEvento"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_horizontal"
+                                        android:text="R$"
+                                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                                        android:textColor="@color/branco" />
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/branco"
+                                    android:paddingBottom="1dp"
+                                    android:paddingTop="1dp" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal"
+                                    android:padding="8dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_horizontal"
+                                        android:text="@string/restam"
+                                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                                        android:textColor="@color/branco"
+                                        android:visibility="gone" />
+
+                                    <TextView
+                                        android:id="@+id/txtVagasDisponiveis"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_horizontal"
+                                        android:paddingLeft="8dp"
+                                        android:text="Vagas"
+                                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                                        android:textColor="@color/branco" />
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                style="@style/editText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/margin">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/quando" />
+
+                                <TextView
+                                    android:id="@+id/txtQuando"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="4dp"
+                                    android:text="Semana XX de mes. as HH:mm" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/layoutPromocional"
+                                style="@style/editText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:padding="8dp">
+
+                                <ImageView
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:src="@drawable/etiqueta_verde" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:paddingLeft="8dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/txtValorPromocionalIndividual"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="R$ XXX,XX"
+                                            android:textColor="@color/chef_verde_limao"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/txtValorPromocionalIndividualValidade"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:paddingLeft="8dp"
+                                            android:text=" até dia XX Mês"
+                                            android:textColor="@color/chef_verde_limao" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/txtValorPromocionalColetivo"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="R$ XXX,XX"
+                                            android:textColor="@color/chef_verde_limao"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/txtValorPromocionalQtdeColetivo"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:paddingLeft="8dp"
+                                            android:text=" para XX convites"
+                                            android:textColor="@color/chef_verde_limao" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <Button
+                                android:id="@+id/btnComprar"
+                                style="@style/botao_laranja"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/btn_comprar"
+                                android:textStyle="normal" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btnAgendeEventoExclusivo"
+                            style="@style/botao_verde_musgo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/btn_agende_evento_exclusico"
+                            android:textStyle="normal" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/btnFaleComAnfitriao"
+                                style="@style/btn_simples_cinza"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="4dp"
+                                android:layout_weight="3"
+                                android:text="@string/btn_fale_com_anfitriao" />
+
+                            <Button
+                                android:id="@+id/btnCompartilhar"
+                                style="@style/btn_simples_cinza"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:layout_weight="2"
+                                android:text="@string/btn_compartilhe" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layoutOutrasDatas"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/outras_datas_do_mesmo_evento" />
+
+                            <LinearLayout
+                                android:id="@+id/layoutAddOutrasDatas"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@color/chef_cinza_claro" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/menu"
+                                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+                                android:textColor="@color/chef_cinza_escuro" />
+
+                            <TextView
+                                android:id="@+id/txtInfoMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:maxLines="5"
+                                android:text="*" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layoutBebidas"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/bebidas"
+                                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+                                android:textColor="@color/chef_cinza_escuro" />
+
+                            <TextView
+                                android:id="@+id/txtInfoBebidas"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:maxLines="5"
+                                android:text="*" />
+
+                            <Button
+                                android:id="@+id/btnMaisInfoBebidas"
+                                style="@style/btn_entrar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/veja_todo_cardapio" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/margin"
+                            android:background="@color/chef_cinza_claro" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="vertical">
+
+
+                            <include layout="@layout/include_dados_chef_detalhes_evento" />
+
+                            <TextView
+                                android:id="@+id/txtInfoChef"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:maxLines="3"
+                                android:text="*" />
+
+                            <Button
+                                android:id="@+id/btnMaisInfoChef"
+                                style="@style/btn_entrar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/veja_mais" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/margin"
+                            android:background="@color/chef_cinza_claro" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="@string/onde"
+                                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+                                    android:textColor="@color/chef_cinza_escuro" />
+
+
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:id="@+id/txtOnde"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:paddingLeft="8dp"
+                                android:text="*" />
+
+                            <TextView
+                                android:id="@+id/txtOndeEndereco"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="*" />
+
+                            <Button
+                                android:id="@+id/btnMaisInfoOnde"
+                                style="@style/btn_entrar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/veja_mais" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/branco"
+                        android:orientation="vertical">
+
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/viewPagerFotosLocal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <br.com.chef2share.view.CirclePageIndicator
+                            android:id="@+id/pageIndicatorFotosLocal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center"
+                            android:padding="8dp"
+                            app:fillColor="@color/chef_cinza_claro"
+                            app:pageColor="@color/chef_cinza_escuro" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/branco"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/margin">
+
+                        <fragment
+                            android:id="@+id/map"
+                            android:name="com.google.android.gms.maps.SupportMapFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            tools:context="br.com.chef2share.activity.MapaActivity" />
+
+                        <TextView
+                            android:id="@+id/txtInfoNumeroCasa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/margin"
+                            android:paddingRight="@dimen/margin"
+                            android:paddingTop="8dp"
+                            android:text="@string/numero_fornecido_para_quem_comprar" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutConvidados"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/branco"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/margin"
+                        android:paddingRight="@dimen/margin"
+                        android:paddingTop="@dimen/margin"
+
+                        >
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/chef_cinza_claro" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/lista_de_convidados"
+                            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+                            android:textColor="@color/chef_cinza_escuro" />
+
+                        <TextView
+                            android:id="@+id/txtConvidadosBarraDisponivel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/margin"
+                            android:text="*" />
+
+                    </LinearLayout>
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/viewPagerParticipantes"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@color/branco"
+                        android:gravity="center" />
+
+                    <br.com.chef2share.view.CirclePageIndicator
+                        android:id="@+id/pageIndicatorParticipantes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center"
+                        android:background="@color/branco"
+                        android:padding="8dp"
+                        app:fillColor="@color/chef_cinza_claro"
+                        app:pageColor="@color/chef_cinza_escuro" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/branco"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/margin"
+                        android:paddingLeft="@dimen/margin"
+                        android:paddingRight="@dimen/margin">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/chef_cinza_claro" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/avaliacoes"
+                            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+                            android:textColor="@color/chef_cinza_escuro" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/txtQtdeTotalAvaliacoes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/margin"
+                                android:text="XX" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/margin"
+                                android:paddingLeft="8dp"
+                                android:text="@string/no_total" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/avaliacao_atendimento"
+                            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:textColor="@color/chef_cinza_escuro"
+                            android:textStyle="bold" />
+
+                        <RatingBar
+                            android:id="@+id/ratingAvaliacaoAtendimento"
+                            style="@style/RatingBarSmallratting_start"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:rating="5" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="8dp"
+                            android:text="@string/avaliacao_comida"
+                            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:textColor="@color/chef_cinza_escuro"
+                            android:textStyle="bold" />
+
+                        <RatingBar
+                            android:id="@+id/ratingAvaliacaoComida"
+                            style="@style/RatingBarSmallratting_start"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:rating="5" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="8dp"
+                            android:text="@string/avaliacao_local"
+                            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:textColor="@color/chef_cinza_escuro"
+                            android:textStyle="bold" />
+
+                        <RatingBar
+                            android:id="@+id/ratingAvaliacaoLocal"
+                            style="@style/RatingBarSmallratting_start"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:rating="5" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/branco"
+                        android:orientation="vertical">
+
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/viewPagerComentarios"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <br.com.chef2share.view.CirclePageIndicator
+                            android:id="@+id/pageIndicatorComentarios"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center"
+                            android:padding="8dp"
+                            app:fillColor="@color/chef_cinza_claro"
+                            app:pageColor="@color/chef_cinza_escuro" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutOutrosEventosChef"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/branco"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/branco"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/margin"
+                            android:paddingRight="@dimen/margin"
+
+                            >
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/chef_cinza_claro" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="8dp"
+                                android:paddingBottom="8dp"
+                                android:text="@string/outros_eventos_do_chef"
+                                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+                                android:textColor="@color/chef_cinza_escuro" />
+
+                            <TextView
+                                android:id="@+id/txtNomeChefOutrosEventos"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/margin"
+                                android:text="XXXXX"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/viewPagerOutrosEventosChef"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <br.com.chef2share.view.CirclePageIndicator
+                            android:id="@+id/pageIndicatorOutrosEventosChef"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center"
+                            android:padding="8dp"
+                            app:fillColor="@color/chef_cinza_claro"
+                            app:pageColor="@color/chef_cinza_escuro" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutAguarde"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/bg_chef"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <ProgressBar
+                        style="@android:style/Widget.ProgressBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>

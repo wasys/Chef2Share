@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cinza_claro"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/margin">
+
+        <FrameLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_circle_foto_perfil" />
+
+            <br.com.chef2share.view.RoundedImageView
+                android:id="@+id/imgMeuPerfilFoto"
+                style="@style/btn_foto_perfil"
+                android:layout_width="98dp"
+                android:layout_height="98dp"
+                android:layout_gravity="center" />
+
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tNomeUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:textColor="@color/chef_cinza_escuro" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/branco"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/listViewMenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnBuscarEComprarEvento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bt_laranja_background"
+        android:drawableRight="@drawable/ic_search"
+        android:paddingRight="@dimen/margin"
+        android:text="@string/btn_buscar_e_comprar_evento"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+        android:textColor="@color/branco" />
+
+    <Button
+        android:id="@+id/btnCriarGerenciarEvento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bt_laranja_background"
+        android:drawableRight="@drawable/ic_icone_chef_menu_logado"
+        android:paddingRight="@dimen/margin"
+        android:text="@string/btn_criar_gerenciar_evento"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+        android:textColor="@color/branco" />
+
+
+</LinearLayout>

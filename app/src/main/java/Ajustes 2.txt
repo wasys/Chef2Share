@@ -1,0 +1,49 @@
+1)  A página de busca do mobile deverá carregar um máximo de 12 ou 18 eventos e então vai carregando
+    de 6 em 6 ou 12 em 12 vejam o que fica melhor.
+#Jonas: A paginação vai ser a última coisa a ser feita.
+
+2)  Os filtros Tipo de evento e valor máximo devem estar fechados na página de busca de eventos e o
+    botão filtros deve ser mostrar filtros.
+    Tudo está rolando... ficou legal. Entretanto os filtros de local e data não estão funcionando.
+    Após selecionar a cidade já deve esconder o teclado e refletir na hora... com relação as datas
+    mesma coisa.
+#Jonas: Corrigido. Sobre os filtros não estarem funcionando precisa verificar no server, a request esta saindo do mobile conforme esperado.
+
+3)  O mapa não está funcionando
+#Jonas: Acho que dava pau quando clicava para ir para o mapa sem ter carregado os eventos na tela de busca.
+Adicionei uma trava pra isso, só avança para o mapa caso tenha obtido os eventos na tela de busca.
+Aproveitando a falar sobre a tela do mapa, não consegui encontrar uma forma de mostrar todos 'pin' no mapa
+com a foto do chef com bordas cinza. Só é possível carregar a foto quando selecionado um local, onde é permitido utilizar
+uma InfoView para o pin selecionado. Deixei no mapa todos os locais com o pin verde e quando selecionado o evento/pin
+exibe os detalhes na InfoView com a foto e borda laranja.
+
+4)  Os tipos de evento Curso e Aula Show não estão alterando as Labels e não está aparecendo o botão
+    de mais informações (interessante ver na WEB o comportamento).
+#Jonas: Quais labels devem ser alteradas??? Que botão de mais info???
+
+5)  Só deve aparecer a lista de convidados se o evento for privado. Para eventos públicos não deve
+    aparecer.
+#Jonas: Já estava sendo aplicada essa regra, eu validei e esta funcionando. favor retestar.
+
+6)  Em comprar no evento gratuito (exemplo o do hambúrguer) depois de comprado deve ir para tela de
+    eventos que eu vou. O mesmo se o evento for pago.
+#Jonas: Ok.
+
+7)  O funcionamento da tela eventos que eu vou deve ser o mesmo da WEB.
+    Deve mostrar todos os eventos da data atual até a última e permitir selecionar datas anteriores.
+    Ordenado por data.
+#Jonas: Hoje a transação não permite que seja consulta os eventos que vou sem ser passado um range
+ de datas como parâmetros. O aplicativo esta considerando um filtro de 01/01/2015 até +1 ano.
+ Sobre a ordenação, esta sendo apresentado na ordem que o servidor retorna, pelo que vi esta igual na web.
+
+8)  Não está funcionando o clique para outras datas do mesmo evento... Deveria abrir o evento em
+    questão como na WEB. Sugestão separar com | ao invés de ,
+#Jonas: Alterado, favor testar.
+
+9)  A tela de cadastro a parte da foto não está OK! não abre a galeria e não está salvando...
+    Deve ter um quadrado na câmera para encaixar o rosto senão irá ficar desproporcional.
+#Jonas: A captura da foto será feita, mas não será criado o componente para enquadrar o rosto.
+
+10) O Menu lateral com a foto deve aparecer na tela eventos que vou e também no detalhe do pedido.
+#Jonas: A tela foi criada com base no layout que me foi enviado, e não tinha isso, Foi acrescentado depois.
+Não será feito.

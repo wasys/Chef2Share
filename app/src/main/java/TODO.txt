@@ -1,0 +1,20 @@
+- Tela 9 - Valores promocionais permitem ação de compra?
+- Tela 7 - A seleção de endereço é apenas Cidade - UF?
+- Tela 10 - Quantidade máxima de itens para comprar deve vir do servidor.
+- Tela 14 Commo vai funcionar o combo de documento?
+-
+
+keytool -exportcert -keystore C:\Users\Jonas\.android\debug.keystore | "D:\Dev\openssl-0.9.8k_X64\bin\openssl.exe" sha1 -binary | "D:\Dev\openssl-0.9.8k_X64\bin\openssl.exe" base64
+Resultado: eMN6BWxMyk1cAHIQMLM4cfExiHs=
+
+GCM
+Server ID: AIzaSyAbniGMTpZu7f33xeXSWY-taXQcwRNwKtY
+Sender ID: 154124496069
+
+QRCode
+http://mlife02.wasys.com.br:8080/c2shmg/qrcode?text=Jonas%20Baggio&height=300&width=300
+
+
+Número: 4111111111111111
+Validade 12/30
+Código de segurança: 123

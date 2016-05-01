@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@color/transparente"
+    android:padding="8dp"
+    >
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <br.com.chef2share.view.RoundedImageView
+                android:id="@+id/imgChef"
+                android:layout_width="70dp"
+                android:layout_height="76dp"
+                android:layout_gravity="center"
+                android:src="@drawable/userpic" />
+
+            <ImageView
+                android:id="@+id/imgPin"
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                android:layout_gravity="center"
+                android:src="@drawable/pin_laranja"/>
+
+
+        </FrameLayout>
+
+        <ProgressBar
+            android:id="@+id/progressImgChef"
+            style="@android:style/Widget.ProgressBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+
+    </FrameLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/txtNomeChef"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cadastre_se_com"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:textColor="@color/chef_verde_musgo" />
+
+    <RatingBar
+        android:visibility="gone"
+        android:id="@+id/ratingAvaliacaoChef"
+        style="@style/RatingBarSmallratting_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         />
+</LinearLayout>

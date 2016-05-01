@@ -1,0 +1,104 @@
+TRIVIAL DRIVE - SAMPLE FOR IN-APP BILLING VERSION 3
+Copyright (c) 2012 Google Inc. All rights reserved.
+Bruno Oliveira, 2012-11-29
+
+CHANGELOG
+
+   2012-11-29: initial release
+   2013-01-08: updated to include support for subscriptions
+
+
+WHAT IS THIS SAMPLE?
+
+   Este jogo é um jogo simples "condução", onde o jogador pode comprar gás
+    e dirigir. O carro tem um tanque que armazena gás. Quando as compras de jogadores
+    gás, o reservatório enche-se (1/4 do tanque de cada vez). Quando as unidades do jogador, o gás
+    nas diminui tanque (também de 1/4 do tanque de cada vez).
+
+    O usuário também pode comprar uma "atualização premium" que lhes dá um carro vermelho
+    em vez do azul padrão (Excitante!).
+
+    O usuário também pode adquirir uma assinatura ("gás infinito"), que lhes permite
+    dirigir sem usar qualquer gás, enquanto que assinatura estiver ativa.
+
+
+HOW TO RUN THIS SAMPLE
+
+   Essa amostra não pode ser executado como está. Você tem que criar o seu próprio
+    instância do aplicativo no console do desenvolvedor e modificar este
+    provar para apontar para ele. Aqui está o que você deve fazer:
+
+   ON THE GOOGLE PLAY DEVELOPER CONSOLE
+   
+   1. Criar um aplicativo do desenvolvedor Console. Você deve usar
+       versão 2, disponível em https://play.google.com/apps/publish/v2/
+       ou mais tarde. In-App faturamento versão 3 não está disponível no mais velho
+       versões do Developer Console.
+
+   2. Nesse aplicativo, criar ADMINISTRADO itens no aplicativo com estes IDs:
+           premium, gas
+       Defina os seus preços para 1 dólar (ou qualquer outro preço que você gosta,
+       mas torná-lo um pequeno preço uma vez que este é apenas para fins de teste).
+
+   3. Nesse aplicativo, criar um itens de assinatura com este ID:
+           infinite_gas
+       Definir o preço de 1 dólar ea recorrência de faturamento para mensal. só assim
+       você não é imediatamente debitado quando você testá-lo, defina o período de teste para
+       sete dias.
+
+   4. Certifique-se a sua conta de teste (o que você vai usar para as compras de teste)
+       está corretamente listadas na seção "teste". A sua conta de teste não pode
+       SER O mesmo que a conta do editor. Se for, compras não vai
+       meio.
+
+   5. Pegue a chave pública do pedido (uma string base-64) - você vai precisar
+       que no próximo. Note-se que esta é a chave pública * do aplicativo *, e não o
+       chave pública desenvolvedor. Você pode encontrar a chave pública do aplicativo em
+       a página "Serviços e API" para sua aplicação.
+
+   IN THE CODE
+
+   1. Abra MainActivity.java e substituir a chave de espaço reservado com a chave pública do seu aplicativo.
+   
+   2. Mude o nome do pacote da amostra para o seu nome de pacote. Para fazer isso, você só precisa
+    para atualizar o nome do pacote no AndroidManifest.xml e corrigir as referências (especialmente
+    as referências ao objeto R).
+   
+   3. Certifique-se de que AndroidManifest.xml lista o nome do pacote atualizado!
+   4. Exportar um APK, assiná-lo com o seu PRODUÇÃO (não debug) certificado de desenvolvedor
+
+   BACK TO GOOGLE PLAY DEVELOPER CONSOLE
+   
+   1. Envie seu APK para Google Play
+   2. Espere 2-3 horas para o Google Play para processar o APK (se você não fizer isso, você pode
+       ver erros onde Google Play diz que "esta versão do aplicativo
+       não está habilitado para o faturamento "in-app ou algo similar)
+    
+   TEST THE CODE
+
+   1. Instale o APK, assinado com seu certificado de produção, para um dispositivo de teste [*]
+   2. Run the app
+   3. Fazer compras (certifique-se que você está comprando com uma conta que não é
+       sua conta de desenvolvedor com que você carregou o aplicativo Google Play).
+
+   Lembre-se de reembolsar todas as compras reais que você faz, se você não quer que o
+    encargos para realmente a passar.
+
+  [*]: Que será mais fácil de usar um dispositivo de teste que não tem o seu
+    conta de desenvolvedor logado, isto é porque, se você tentar comprar
+    um item in-app usando a mesma conta que você usou para publicar o aplicativo,
+    a compra não vai passar.
+
+
+A NOTE ABOUT SECURITY
+
+   Este aplicativo de exemplo implementa a verificação de assinatura, mas não demonstra
+    como aplicar um modelo de segurança apertado. Ao liberar um aplicativo de produção
+    ao público em geral, é altamente recomendável que você implemente a segurança melhor
+    práticas descritas em nossa documentação em:
+   
+   http://developer.android.com/google/play/billing/billing_best_practices.html
+
+   Em particular, você deve definir seqüências de carga útil para desenvolvedores ao fazer compra
+    pedidos e você deve verificá-los de volta ao ler os resultados. Isso fará com que
+    mais para uma festa malicioso para executar um ataque de repetição em seu aplicativo.

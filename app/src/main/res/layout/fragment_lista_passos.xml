@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fluxoPasso"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <fragment
+                android:id="@+id/fragmentPasso1"
+                android:name="br.com.chef2share.fragment.FragmentPasso1_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="FragmentPasso1_" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/branco" />
+
+            <fragment
+                android:id="@+id/fragmentPasso2"
+                android:name="br.com.chef2share.fragment.FragmentPasso2_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="FragmentPasso2_" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/branco" />
+
+            <fragment
+                android:id="@+id/fragmentPasso3"
+                android:name="br.com.chef2share.fragment.FragmentPasso3_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="FragmentPasso3_" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/branco" />
+
+            <fragment
+                android:id="@+id/fragmentPasso4"
+                android:name="br.com.chef2share.fragment.FragmentPasso4_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="FragmentPasso4_" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/branco" />
+
+            <fragment
+                android:id="@+id/fragmentPasso5"
+                android:name="br.com.chef2share.fragment.FragmentPasso5_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="FragmentPasso5_" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+
+

@@ -1,0 +1,43 @@
+Oi Jonas,
+
+Tirando a parte da WEBVIEW de pagamento que não gostei, mas que iremos mudar por aqui... (por enquanto vai usando ela)... Segue abaixo algumas considerações...
+
+0- Massa de teste... (vamos duplicar a base de produção para o ambiente de homologação)... Precisamos ver como se comporta com vários eventos cadastrados.
+
+##OK 1- Tela login (vamos colocar ela no padrão que foi enviado antes... segue a imagem sem a logo);
+
+##OK 2- Tela cadastro (vamos colocar ela no padrão que foi enviado antes... segue imagem sem a logo);
+
+3- Tela Home (tela anexo);
+    - Ajustar fontes e #OK alinhamentos do primeiro box;
+    ##OK - Colocar ícone da lupa no botão "procurar eventos";
+    ##OK - Ajustar tamanho da foto da pessoa logada e colocar borda e a seta (menu);
+    ###!!!- Faltou o Bloco cinza "celebre...";
+    ###!!!- Faltou os 3 blocos finais "sou um chef" / "sou um anfitrião" / "quero rachar a conta";
+
+##OK 4- Alinhar os títulos do Header de cada página pela esquerda;
+
+5- Tela de detalhes (tela anexo);
+    ##OK - As bolinhas do carrossel devem ser escuras;
+    ##OK - Deixar o título maior, como no padrão (veja tela anexo);
+    ##OK - Colocar linha divisória em baixo das outras datas;
+    ##OK - Lista de convidados (só vai aparecer quando for um evento privado... Para eventos públicos esta seção não aparece... Tivemos um problema forte com privacidade por causa disso na WEB já está correto);
+    ##OK - Ajustar padrão visual das avaliações... incluindo o leia mais que não dever ser botão.
+
+6- Tela de busca (tela anexo);
+    - No título da página usar a palavra "eventos" e em baixo os filtros selecionados;
+    ##OK - O filtro deve rolar junto com a tela, igual o app do AirBnb.
+    ##OK - Local fica aberto como estava antes;
+    ##OK - Tirar "tipo de cozinha dos filtros" (não teremos mais esta opção);
+    - Na versão mapa, todos os chefs devem estar aparecendo com suas fotos. Não é necessário mostrar nome e a avaliação nessa página abaixo deles... quando selecionados apenas muda o contorno.
+    ##OK - Tirar o botão "detalhes" no evento do mapa, colocar link na imagem e no título para ir para a tela de detalhes.. (veja a tela do mapa anexo)
+    ##OK - Na tela do mapa, bloquear o giro (landscape)... ele detona a tela.
+
+7- Tela comprar (tela anexo);
+    ##OK - Simplificar usando os títulos como no exemplo;
+
+8- Tela avaliação (tela anexo);
+    - Parecida com a tela de comprar, simplificar;
+
+9- Tela compra detalhes (tela anexo);
+    - Simplificar como em anexo.

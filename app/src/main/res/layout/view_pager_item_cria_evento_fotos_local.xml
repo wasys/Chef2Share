@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_chef"
+    android:orientation="vertical">
+
+    <TextView
+        android:visibility="gone"
+        android:gravity="center_horizontal"
+        android:id="@+id/txtNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/branco">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/fotolia" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="@style/ProgressBarprogressBarHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:indeterminate="true" />
+
+        <ImageView
+            android:background="@drawable/messenger_button_send_round_shadow"
+            android:src="@drawable/ic_icon_delete"
+            android:padding="8dp"
+            android:layout_margin="@dimen/margin"
+            android:layout_gravity="top|left"
+            android:id="@+id/imgDelete"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+             />
+
+        <ImageView
+            android:background="@drawable/messenger_button_send_round_shadow"
+            android:src="@drawable/ic_action_new"
+            android:padding="8dp"
+            android:layout_margin="@dimen/margin"
+            android:layout_gravity="top|right"
+            android:id="@+id/imgAdicionarImagem"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            />
+
+    </FrameLayout>
+
+</LinearLayout>

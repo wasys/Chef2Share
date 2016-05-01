@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:ratingBarStyleSmall">@style/RatingBarSmallratting_start</item>
+        <item name="android:ratingBarStyle">@style/RatingBar</item>
+        <item name="android:editTextStyle">@style/editText</item>
+        <item name="android:dropDownSpinnerStyle">@style/spinner</item>
+        <item name="android:progressBarStyleHorizontal">@style/ProgressBarprogressBarHorizontal</item>
+
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.DialogMaisInfo" parent="Theme.AppCompat.Light.Dialog.MinWidth">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="ProgressBarprogressBarHorizontal" parent="@android:style/Widget.Holo.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progressbarhorizontal_progress_horizontal_holo_light</item>
+        <item name="android:indeterminateDrawable">@drawable/progressbarhorizontal_progress_indeterminate_horizontal_holo_light</item>
+    </style>
+
+    <style name="bt_submit_button" parent="@style/bt_base_textview">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/bt_azul_background</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/bt_default_item_height</item>
+    </style>
+
+    <style name="bt_base_textview">
+        <item name="android:textAppearance">@android:style/TextAppearance.DeviceDefault.Medium</item>
+    </style>
+    <style name="bt_base_textview_bold" parent="@style/bt_base_textview">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="btn_entrar" parent="@android:style/Widget.Button.Small">
+        <item name="android:textSize">14sp</item>
+        <item name="android:text">@string/btn_entrar</item>
+        <item name="android:textColor">@color/chef_verde_musgo</item>
+        <item name="android:background">@drawable/btn_simples_cinza_background</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+    </style>
+
+    <style name="btn_simples_laranja" parent="@style/btn_simples">
+        <item name="android:textColor">@color/chef_laranja</item>
+        <item name="android:background">@drawable/btn_simples_laranja_background</item>
+    </style>
+
+    <style name="btn_simples_cinza" parent="@style/btn_simples">
+        <item name="android:textColor">@color/chef_cinza_claro</item>
+        <item name="android:background">@drawable/btn_simples_cinza_background</item>
+    </style>
+
+    <style name="btn_simples_azul" parent="@style/btn_simples">
+        <item name="android:textColor">@color/bt_simples_azul_off</item>
+        <item name="android:background">@drawable/btn_simples_azul_background</item>
+    </style>
+    <style name="btn_simples_amarelo" parent="@style/btn_simples">
+        <item name="android:textColor">@color/bt_simples_amarelo_off</item>
+        <item name="android:background">@drawable/btn_simples_amarelo_background</item>
+    </style>
+    <style name="btn_simples_vermelho" parent="@style/btn_simples">
+        <item name="android:textColor">@color/bt_simples_vermelho_off</item>
+        <item name="android:background">@drawable/btn_simples_vermelho_background</item>
+    </style>
+
+
+    <style name="btn_simples_cinza_smal" parent="@style/btn_entrar">
+        <item name="android:textColor">@color/chef_cinza_claro</item>
+        <item name="android:background">@drawable/btn_simples_cinza_background</item>
+    </style>
+
+    <style name="btn_simples_azul_small" parent="@style/btn_entrar">
+        <item name="android:textColor">@color/bt_simples_azul_off</item>
+        <item name="android:background">@drawable/btn_simples_azul_background</item>
+    </style>
+    <style name="btn_simples_amarelo_small" parent="@style/btn_entrar">
+        <item name="android:textColor">@color/bt_simples_amarelo_off</item>
+        <item name="android:background">@drawable/btn_simples_amarelo_background</item>
+    </style>
+    <style name="btn_simples_vermelho_small" parent="@style/btn_entrar">
+        <item name="android:textColor">@color/bt_simples_vermelho_off</item>
+        <item name="android:background">@drawable/btn_simples_vermelho_background</item>
+    </style>
+
+
+    <style name="btn_simples" parent="@android:style/Widget.Button">
+        <item name="android:textAppearance">@android:style/TextAppearance.DeviceDefault.Medium</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:paddingLeft">8dp</item>
+    </style>
+
+    <style name="editText" parent="@android:style/Widget.EditText">
+        <item name="android:textColor">@color/chef_cinza_escuro</item>
+        <item name="android:background">@drawable/chef_edit_text</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:padding">8dp</item>
+
+    </style>
+
+    <style name="editTextArea" parent="@style/editText">
+        <item name="android:singleLine">false</item>
+
+    </style>
+
+    <style name="spinner" parent="@android:style/Widget.Spinner">
+        <item name="android:textColor">@color/chef_cinza_escuro</item>
+        <item name="android:background">@drawable/chef_edit_text</item>
+        <item name="android:drawableRight">@drawable/wishlist_carrot</item>
+
+    </style>
+
+    <style name="custom_buttom" parent="@android:style/Widget.Button">
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@color/branco</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">8dp</item>
+    </style>
+
+    <style name="botao_laranja" parent="@style/custom_buttom">
+        <item name="android:background">@drawable/bt_laranja_background</item>
+    </style>
+    <style name="botao_verde_musgo" parent="@style/custom_buttom">
+        <item name="android:background">@drawable/bt_verde_musgo_background</item>
+    </style>
+
+    <style name="text_shadow">
+        <item name="android:shadowColor">@color/preto</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">2</item>
+
+    </style>
+
+    <style name="com_google_plus_button" parent="@android:style/Widget.Button">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bt_google_plus_background</item>
+        <item name="android:paddingLeft">8.0dip</item>
+        <item name="android:paddingRight">16.0dip</item>
+        <item name="android:drawableLeft">@drawable/ic_plus</item>
+    </style>
+
+    <style name="btn_foto_perfil" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/bt_foto_perfil_background</item>
+    </style>
+
+    <style name="btn_header_voltar" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/bt_voltar_header_background</item>
+    </style>
+
+    <style name="btn_header_mapa" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/bt_mapa_header_background</item>
+    </style>
+    <style name="btn_header_share" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/bt_share_header_background</item>
+    </style>
+
+    <!--
+    <style name="com_facebook_button" parent="@android:style/Widget.Button">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/com_facebook_button_background</item>
+        <item name="android:paddingLeft">8.0dip</item>
+        <item name="android:paddingRight">16.0dip</item>
+    </style>
+
+    <style name="com_facebook_button_like" parent="@style/com_facebook_button">
+        <item name="android:background">@drawable/com_facebook_button_like_background</item>
+    </style>
+    <style name="com_facebook_button_send" parent="@style/com_facebook_button">
+        <item name="android:background">@drawable/com_facebook_button_send_background</item>
+        <item name="android:text">@string/com_facebook_send_button_text</item>
+        <item name="android:drawableLeft">@drawable/com_facebook_button_send_icon</item>
+    </style>
+    <style name="com_facebook_button_share" parent="@style/com_facebook_button">
+        <item name="android:text">@string/com_facebook_share_button_text</item>
+        <item name="android:drawableLeft">@drawable/com_facebook_button_icon</item>
+    </style>
+    <style name="com_facebook_loginview_default_style" parent="@style/com_facebook_button">
+        <item name="android:drawableLeft">@drawable/com_facebook_button_icon</item>
+    </style>
+
+    <style name="com_facebook_loginview_silver_style" parent="@style/com_facebook_loginview_default_style">
+        <item name="android:textColor">#ff4b5164</item>
+        <item name="android:background">@drawable/com_facebook_button_login_silver_background</item>
+        <item name="android:drawableLeft">@null</item>
+    </style>
+    <style name="FacebookLoginButton">
+        <item name="android:textAppearance">@android:style/TextAppearance.DeviceDefault.Medium</item>
+        <item name="android:background">@drawable/com_facebook_button_background</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+    -->
+
+    <style name="bg_item_home">
+        <item name="android:background">@drawable/bg_escuro_alpha</item>
+        <item name="android:alpha">0.4</item>
+        <item name="android:radius">10dp</item>
+    </style>
+
+    <style name="btn_tabs" parent="@android:style/Widget.ImageButton">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
+
+    <style name="btn_icon_tab_messages" parent="btn_tabs">
+        <item name="android:background">@drawable/icon_tab_messages_background</item>
+    </style>
+
+    <style name="btn_icon_tab_chectoshare" parent="btn_tabs">
+        <item name="android:background">@drawable/icon_tab_cheftoshare_background</item>
+    </style>
+
+    <style name="btn_icon_tab_search" parent="btn_tabs">
+        <item name="android:background">@drawable/icon_tab_search_background</item>
+    </style>
+
+    <style name="RatingBarSmallratting_start" parent="android:Widget.Holo.RatingBar.Small">
+        <item name="android:progressDrawable">@drawable/ratting_start_ratingbar_small_holo_dark</item>
+        <item name="android:indeterminateDrawable">@drawable/ratting_start_ratingbar_small_holo_dark</item>
+    </style>
+
+    <style name="RatingBar" parent="android:Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/food_rating_bar_full</item>
+        <item name="android:minHeight">23dip</item>
+        <item name="android:maxHeight">25dip</item>
+    </style>
+
+    <style name="Transparent" parent="android:Theme.Light">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="passo_header_ativo">
+        <item name="android:background">@drawable/bt_criar_evento_on</item>
+    </style>
+
+    <style name="passo_header_inativo">
+        <item name="android:background">@drawable/bt_criar_evento_off</item>
+    </style>
+
+    <style name="passo_header_indicador_off">
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/bg_indicador_passo_off</item>
+        <item name="android:textColor">@color/branco</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.DeviceDefault.Medium</item>
+    </style>
+
+    <style name="passo_header_indicador_on" parent="passo_header_indicador_off">
+        <item name="android:background">@drawable/bg_indicador_passo_on</item>
+    </style>
+    <style name="bg_novas_msgs">
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/bg_indicador_novas_msgs</item>
+        <item name="android:textColor">@color/branco</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.DeviceDefault.Small</item>
+    </style>
+
+    <style name="checkbox_foto_principal" parent="android:Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_foto_principal</item>
+    </style>
+    <style name="checkbox_foto_divulgacao" parent="android:Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_foto_divulgacao</item>
+    </style>
+    <style name="checkbox_acompanha_evento" parent="android:Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_ingresso</item>
+    </style>
+
+</resources>

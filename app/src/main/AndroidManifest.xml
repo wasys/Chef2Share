@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.com.chef2share" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+    <permission
+        android:name="br.com.chef2share.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="br.com.chef2share.permission.C2D_MESSAGE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".SuperApplication_"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider1061925513842281"
+            android:exported="true" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="CLOUDINARY_URL"
+            android:value="cloudinary://123456789012345:abcdeghijklmnopqrstuvwxyz12@n07t21i7" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".activity.SplashActivity_"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.SuperExceptionHandlerActivity_"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name=".activity.SuperActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name=".activity.SuperActivityMainMenu_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name=".activity.HomeActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name=".activity.EntrarActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name=".activity.NovoCadastroActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name=".activity.DadosCadastraisActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name=".activity.TesteActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name=".activity.BuscaEventosActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name=".activity.DetalheEventoActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name=".activity.CompraEventoActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name=".activity.PagamentoActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+        </activity>
+
+        <activity
+            android:name=".activity.AjudaActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name=".activity.TermosDeUsoActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name=".activity.EventosQueVouActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+        </activity>
+
+        <activity
+            android:name=".activity.EventosQueOferecoActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+        </activity>
+
+        <activity
+            android:name=".activity.DetalheEventoQueVouActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+        </activity>
+
+        <activity
+            android:name=".activity.AlertMaisInfoChefActivity_"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.DialogMaisInfo"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+        </activity>
+
+        <activity
+            android:name=".activity.AlertMaisInfoBebidasActivity_"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.DialogMaisInfo"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+        </activity>
+
+        <activity
+            android:name=".activity.AlertMaisInfoOndeActivity_"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.DialogMaisInfo"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+        </activity>
+
+        <activity
+            android:name=".activity.AlertConvitesActivity_"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.DialogMaisInfo"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+        </activity>
+
+        <activity
+            android:name=".activity.AlertAvaliacaoEventoActivity_"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.DialogMaisInfo"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+        </activity>
+
+        <activity
+            android:name=".activity.AlertMaisInfoComentarioActivity_"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.DialogMaisInfo"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+        </activity>
+
+        <activity
+            android:name=".activity.AlertResultadoCompraActivity_"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.DialogMaisInfo"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+        </activity>
+
+        <activity
+            android:name=".activity.AlertInputDadoActivity_"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.DialogMaisInfo"
+            android:windowSoftInputMode="adjustPan|stateAlwaysVisible" >
+        </activity>
+        <activity
+            android:name=".activity.AlertInputDadoPasso2Activity_"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.DialogMaisInfo"
+            android:windowSoftInputMode="adjustPan|stateAlwaysVisible" >
+        </activity>
+        <activity
+            android:name=".activity.AlertInputDadoPasso3Activity_"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.DialogMaisInfo"
+            android:windowSoftInputMode="adjustPan|stateAlwaysVisible" >
+        </activity>
+        <activity
+            android:name=".activity.AlertEntradaQRCode_"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.DialogMaisInfo"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+        </activity>
+
+        <activity
+            android:name=".activity.CriarEventoActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name=".activity.CriarEventoPasso1Activity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name=".activity.CriarEventoPasso2Activity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name=".activity.CriarEventoPasso3Activity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name=".activity.EnderecoLocalActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name=".activity.MensagemActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name=".activity.DetalhesMensagemActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name=".activity.AcompanharEventoActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name=".activity.PerfilChefActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" >
+        </activity>
+
+
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="br.com.chef2share" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".service.GCMMessageHandler"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".service.MyInstanceIDListenerService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".activity.MapaActivity_"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_mapa" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+             />
+
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/progressImgBackgroundBanner"
+            style="@style/ProgressBarprogressBarHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            android:padding="8dp" />
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal|top"
+        android:orientation="vertical"
+        android:padding="@dimen/margin">
+
+
+        <TextView
+            style="@style/text_shadow"
+            android:id="@+id/txtTituloBanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textColor="@color/branco"
+            android:textSize="30sp" />
+
+        <TextView
+            style="@style/text_shadow"
+            android:id="@+id/txtSubTituloBanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:textColor="@color/branco"
+            android:textSize="16sp" />
+
+        <Button
+            android:drawableLeft="@drawable/ic_search"
+            android:id="@+id/btnProcurarEventos"
+            style="@style/botao_laranja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin"
+            android:textStyle="normal"
+            android:text="@string/btn_procurar_eventos"
+            android:textColor="@color/branco"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+
+</FrameLayout>

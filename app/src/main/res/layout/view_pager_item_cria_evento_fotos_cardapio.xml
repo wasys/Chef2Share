@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_chef"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/branco">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:scaleType="centerCrop"
+            android:src="@drawable/fotolia" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="@style/ProgressBarprogressBarHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:indeterminate="true" />
+
+        <ImageView
+            android:id="@+id/imgDelete"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="top|left"
+            android:layout_margin="@dimen/margin"
+            android:background="@drawable/messenger_button_send_round_shadow"
+            android:padding="8dp"
+            android:src="@drawable/ic_icon_delete" />
+
+        <LinearLayout
+            android:id="@+id/layoutActions"
+            android:background="@drawable/bg_escuro_alpha"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgAdicionarImagem"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:paddingTop="8dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:src="@drawable/ic_action_new" />
+
+            <CheckBox
+                android:id="@+id/checkBoxFotoDivulgacao"
+                style="@style/checkbox_foto_divulgacao"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="8dp"
+                android:hapticFeedbackEnabled="true"
+                android:layout_marginLeft="5dp"
+                />
+
+            <CheckBox
+                android:layout_marginLeft="5dp"
+                android:id="@+id/checkBoxFotoPrincipal"
+                style="@style/checkbox_foto_principal"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="8dp"
+                 />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

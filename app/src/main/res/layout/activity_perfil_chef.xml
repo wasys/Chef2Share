@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/branco"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_header" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cinza_claro"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/margin">
+
+                <FrameLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_circle_foto_perfil"
+                        />
+
+                    <br.com.chef2share.view.RoundedImageView
+                        android:layout_gravity="center"
+                        android:id="@+id/imgFotoPerfil"
+                        style="@style/btn_foto_perfil"
+                        android:layout_width="98dp"
+                        android:layout_height="98dp" />
+                </FrameLayout>
+
+                <ImageButton
+                    android:id="@+id/btnTirarFoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/icon_take_photo" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/margin">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/perfil_chef_meus_dados"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="1"
+                    android:shrinkColumns="1">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                       >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/perfil_chef_tratamento" />
+
+                        <Spinner
+                            style="@style/editText"
+                            android:id="@+id/spinnerTratamento"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="@dimen/margin" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cadastro_nome" />
+
+                        <EditText
+                            style="@style/editText"
+                            android:id="@+id/txtNome"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin"
+                            android:hint="@string/hint_nome" />
+
+                    </TableRow>
+
+
+
+
+                    <TableRow
+                        android:layout_marginTop="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/perfil_chef_resumo" />
+
+                        <EditText
+                            android:gravity="start"
+                            style="@style/editText"
+                            android:singleLine="false"
+                            android:maxLines="10"
+                            android:lines="5"
+                            android:id="@+id/txtResumo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin"
+                            android:hint="@string/hint_resumo" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/perfil_chef_local_principal" />
+
+                        <Spinner
+                            style="@style/editText"
+                            android:id="@+id/spinnerLocalPrincipal"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="@dimen/margin" />
+
+                    </TableRow>
+
+                </TableLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+
+                    >
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/chef_cinza_claro" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:paddingLeft="@dimen/margin"
+                        android:paddingRight="@dimen/margin"
+                        android:text="@string/rede_social"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+                    />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/chef_cinza_claro" />
+                </LinearLayout>
+
+
+                <EditText
+                    style="@style/editText"
+                    android:id="@+id/txtRedeSocialYoutube"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_youtube_icon"
+                    android:hint="@string/hint_rede_social_youtube"
+                    android:inputType="textUri"
+                     />
+
+                <EditText
+                    style="@style/editText"
+                    android:id="@+id/txtRedeSocialTwitter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:drawableLeft="@drawable/ic_twitter_icon"
+                    android:hint="@string/hint_rede_social_twitter"
+                    android:inputType="textUri"
+                    android:paddingLeft="@dimen/margin" />
+
+                <EditText
+                    style="@style/editText"
+                    android:id="@+id/txtRedeSocialLinkedin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:drawableLeft="@drawable/ic_linkedin_icon"
+                    android:hint="@string/hint_rede_social_linkedin"
+                    android:inputType="textUri"
+                    android:paddingLeft="@dimen/margin" />
+                <EditText
+                    style="@style/editText"
+                    android:id="@+id/txtRedeSocialInstagram"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:drawableLeft="@drawable/ic_insta_icon"
+                    android:hint="@string/hint_rede_social_instagram"
+                    android:inputType="textUri"
+                    android:paddingLeft="@dimen/margin" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+
+                    >
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/chef_cinza_claro" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:paddingLeft="@dimen/margin"
+                        android:paddingRight="@dimen/margin"
+                        android:text="@string/avaliacoes"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+                    />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/chef_cinza_claro" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/avaliacao_atendimento"
+                    />
+
+                <RatingBar
+                    android:id="@+id/ratingAvaliacaoAtendimento"
+                    style="@style/RatingBarSmallratting_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:rating="5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:text="@string/avaliacao_comida"
+                    />
+
+                <RatingBar
+                    android:id="@+id/ratingAvaliacaoComida"
+                    style="@style/RatingBarSmallratting_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:rating="5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:text="@string/avaliacao_local"
+                    />
+
+                <RatingBar
+                    android:id="@+id/ratingAvaliacaoLocal"
+                    style="@style/RatingBarSmallratting_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:rating="5" />
+
+                <Button
+                    android:id="@+id/btnSalvar"
+                    style="@style/btn_simples_laranja"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin"
+                    android:text="@string/btn_salvar" />
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@color/cinza_claro"
+                android:padding="@dimen/margin" />
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

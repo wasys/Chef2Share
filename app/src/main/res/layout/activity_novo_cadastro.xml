@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_chef"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margin">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cadastre_se_com"
+                    android:textColor="@color/branco" />
+
+                <TextView
+                    android:id="@+id/txtCadastroGoogle"
+                    android:paddingLeft="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cadastre_se_com_google"
+                    android:textColor="@color/branco"
+                    android:autoLink="none"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:text="@string/ou"
+                    android:textColor="@color/branco" />
+
+                <TextView
+                    android:id="@+id/txtCadastroFacebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cadastre_se_com_facebook"
+                    android:textColor="@color/branco"
+                    android:autoLink="none"
+                    />
+
+            </LinearLayout>
+
+            <EditText
+                style="@style/editText"
+                android:layout_marginTop="8dp"
+                android:id="@+id/txtNome"
+                android:hint="@string/hint_nome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                style="@style/editText"
+                android:layout_marginTop="8dp"
+                android:id="@+id/txtEmail"
+                android:hint="@string/hint_email"
+                android:inputType="textEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                style="@style/editText"
+                android:layout_marginTop="8dp"
+                android:id="@+id/txtSenha"
+                android:hint="@string/hint_senha"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnCadastrar"
+                style="@style/botao_laranja"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/btn_cadastrar"
+                android:textColor="@color/branco"
+                />
+
+            <View
+                android:layout_marginTop="@dimen/margin"
+                android:layout_marginBottom="@dimen/margin"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/branco"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ja__e_um_usuario_cheftoshare"
+                    android:textColor="@color/branco" />
+
+                <TextView
+                    android:id="@+id/txtLogin"
+                    android:paddingLeft="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login"
+                    android:textColor="@color/branco"
+                    android:autoLink="none"
+                    />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
