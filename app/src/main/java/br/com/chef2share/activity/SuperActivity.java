@@ -245,6 +245,7 @@ public class SuperActivity extends AppCompatActivity implements DialogInterface.
 
     @UiThread
     public void showError(String error) {
+        hideProgress(aguarde, conteudo);
         AppUtil.alertDialogSemIcon(this, error);
     }
 

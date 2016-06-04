@@ -8,6 +8,7 @@ public class UsuarioCadastro {
     private String nome;
     private String email;
     private String senha;
+    private String numeroCelular;
 
     public String getNome() {
         return nome;
@@ -31,5 +32,13 @@ public class UsuarioCadastro {
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public String getNumeroCelular() {
+        return numeroCelular;
+    }
+
+    public void setNumeroCelular(String numeroCelular) {
+        this.numeroCelular = numeroCelular;
     }
 }

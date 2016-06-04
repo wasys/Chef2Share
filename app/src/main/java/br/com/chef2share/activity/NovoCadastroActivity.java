@@ -19,6 +19,7 @@ import br.com.chef2share.domain.request.UsuarioCadastro;
 import br.com.chef2share.domain.service.SuperService;
 import br.com.chef2share.domain.service.UsuarioService;
 import br.com.chef2share.infra.SuperGson;
+import br.com.chef2share.infra.TelefoneMaskEditTextChangeListener;
 import br.com.chef2share.infra.Transacao;
 
 @EActivity(R.layout.activity_novo_cadastro)
@@ -27,10 +28,14 @@ public class NovoCadastroActivity extends SuperActivity  {
     @ViewById public EditText txtNome;
     @ViewById public EditText txtEmail;
     @ViewById public EditText txtSenha;
+    @ViewById public EditText txtNumeroCelular;
 
     @Override
     public void init() {
         super.init();
+
+        txtNumeroCelular.addTextChangedListener(new TelefoneMaskEditTextChangeListener(txtNumeroCelular));
+
     }
 
     @Click(R.id.btnCadastrar)
@@ -39,6 +44,7 @@ public class NovoCadastroActivity extends SuperActivity  {
         String nome = getTextString(txtNome);
         String email = getTextString(txtEmail);
         String senha = getTextString(txtSenha);
+        String numeroCelular = getTextString(txtNumeroCelular);
 
         if(StringUtils.isEmpty(nome)){
             SuperUtil.alertDialog(this, R.string.msg_validacao_nome);
@@ -55,10 +61,16 @@ public class NovoCadastroActivity extends SuperActivity  {
             return;
         }
 
+        if(StringUtils.isEmpty(numeroCelular)){
+            SuperUtil.alertDialog(this, R.string.msg_validacao_numero_celular);
+            return;
+        }
+
         UsuarioCadastro usuarioCadastro = new UsuarioCadastro();
         usuarioCadastro.setEmail(email);
         usuarioCadastro.setNome(nome);
         usuarioCadastro.setSenha(senha);
+        usuarioCadastro.setNumeroCelular(numeroCelular);
 
         doInBackground(getTransacaoNovoCadastro(usuarioCadastro), false);
     }

@@ -176,46 +176,49 @@
     <style name="btn_header_share" parent="@android:style/Widget.Button">
         <item name="android:background">@drawable/bt_share_header_background</item>
     </style>
-
     <!--
-    <style name="com_facebook_button" parent="@android:style/Widget.Button">
-        <item name="android:textSize">14.0dip</item>
-        <item name="android:textColor">#ffffffff</item>
-        <item name="android:gravity">center</item>
-        <item name="android:background">@drawable/com_facebook_button_background</item>
-        <item name="android:paddingLeft">8.0dip</item>
-        <item name="android:paddingRight">16.0dip</item>
-    </style>
+       <style name="com_facebook_button" parent="@style/custom_buttom">
+           <item name="android:textColor">@color/branco</item>
+           <item name="android:background">@drawable/bt_facebook_background</item>
+           <item name="android:text">@string/btn_facebook_entrar</item>
+           <item name="android:gravity">center|center_vertical</item>
+           <item name="android:drawableLeft">@drawable/ic_btn_facebook</item>
+       </style>
+       <style name="com_google_button" parent="com_facebook_button">
+           <item name="android:textColor">@color/chef_cinza_escuro</item>
+           <item name="android:background">@drawable/bt_google_background</item>
+           <item name="android:text">@string/btn_google_entrar</item>
+           <item name="android:drawableLeft">@drawable/ic_btn_google</item>
+       </style>
+           <style name="com_facebook_button_like" parent="@style/com_facebook_button">
+               <item name="android:background">@drawable/com_facebook_button_like_background</item>
+           </style>
+           <style name="com_facebook_button_send" parent="@style/com_facebook_button">
+               <item name="android:background">@drawable/com_facebook_button_send_background</item>
+               <item name="android:text">@string/com_facebook_send_button_text</item>
+               <item name="android:drawableLeft">@drawable/com_facebook_button_send_icon</item>
+           </style>
+           <style name="com_facebook_button_share" parent="@style/com_facebook_button">
+               <item name="android:text">@string/com_facebook_share_button_text</item>
+               <item name="android:drawableLeft">@drawable/com_facebook_button_icon</item>
+           </style>
+           <style name="com_facebook_loginview_default_style" parent="@style/com_facebook_button">
+               <item name="android:drawableLeft">@drawable/com_facebook_button_icon</item>
+           </style>
 
-    <style name="com_facebook_button_like" parent="@style/com_facebook_button">
-        <item name="android:background">@drawable/com_facebook_button_like_background</item>
-    </style>
-    <style name="com_facebook_button_send" parent="@style/com_facebook_button">
-        <item name="android:background">@drawable/com_facebook_button_send_background</item>
-        <item name="android:text">@string/com_facebook_send_button_text</item>
-        <item name="android:drawableLeft">@drawable/com_facebook_button_send_icon</item>
-    </style>
-    <style name="com_facebook_button_share" parent="@style/com_facebook_button">
-        <item name="android:text">@string/com_facebook_share_button_text</item>
-        <item name="android:drawableLeft">@drawable/com_facebook_button_icon</item>
-    </style>
-    <style name="com_facebook_loginview_default_style" parent="@style/com_facebook_button">
-        <item name="android:drawableLeft">@drawable/com_facebook_button_icon</item>
-    </style>
-
-    <style name="com_facebook_loginview_silver_style" parent="@style/com_facebook_loginview_default_style">
-        <item name="android:textColor">#ff4b5164</item>
-        <item name="android:background">@drawable/com_facebook_button_login_silver_background</item>
-        <item name="android:drawableLeft">@null</item>
-    </style>
-    <style name="FacebookLoginButton">
-        <item name="android:textAppearance">@android:style/TextAppearance.DeviceDefault.Medium</item>
-        <item name="android:background">@drawable/com_facebook_button_background</item>
-        <item name="android:layout_marginTop">10dp</item>
-        <item name="android:layout_marginBottom">10dp</item>
-        <item name="android:layout_gravity">center_horizontal</item>
-    </style>
-    -->
+           <style name="com_facebook_loginview_silver_style" parent="@style/com_facebook_loginview_default_style">
+               <item name="android:textColor">#ff4b5164</item>
+               <item name="android:background">@drawable/com_facebook_button_login_silver_background</item>
+               <item name="android:drawableLeft">@null</item>
+           </style>
+           <style name="FacebookLoginButton">
+               <item name="android:textAppearance">@android:style/TextAppearance.DeviceDefault.Medium</item>
+               <item name="android:background">@drawable/com_facebook_button_background</item>
+               <item name="android:layout_marginTop">10dp</item>
+               <item name="android:layout_marginBottom">10dp</item>
+               <item name="android:layout_gravity">center_horizontal</item>
+           </style>
+           -->
 
     <style name="bg_item_home">
         <item name="android:background">@drawable/bg_escuro_alpha</item>

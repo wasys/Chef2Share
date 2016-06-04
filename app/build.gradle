@@ -30,24 +30,55 @@ apt {
     }
 }
 
-def versionApp = '1.3.3 01/03/16'
+def versionApp = '1.1'
 android {
+    signingConfigs {
+        certificadoDev {
+            keyAlias 'chef2share'
+            keyPassword 'schwartz'
+            storeFile file('../chef2share.jks')
+            storePassword 'schwartz'
+        }
+    }
     compileSdkVersion 23
     buildToolsVersion "23.0.1"
-
     defaultConfig {
         applicationId "br.com.chef2share"
         minSdkVersion 15
-        targetSdkVersion 23
+        targetSdkVersion 22
         versionCode 1
         versionName "$versionApp"
         multiDexEnabled true
     }
-
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.certificadoDev
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "URL", "\"http://www.chef2share.com.br/chef2share\""
+            buildConfigField "boolean", "LOG_APP", "true"
+            resValue "string", "google_maps_key", "AIzaSyB_9LpTw1r4OzrndQWNLodl4sU6ql6drwU"
+            resValue "string", "facebook_app_id", "487302584769581"
+        }
+        debug {
+            signingConfig signingConfigs.certificadoDev
+            buildConfigField "String", "URL", "\"http://mlife02.wasys.com.br:8080/c2shmg\""
+            buildConfigField "boolean", "LOG_APP", "true"
+            resValue "string", "google_maps_key", "AIzaSyB_9LpTw1r4OzrndQWNLodl4sU6ql6drwU"
+            resValue "string", "facebook_app_id", "487302584769581"
+        }
+
+    }
+
+    productFlavors {
+        Chef2Share_PROD {
+            applicationId = "br.com.chef2share"
+            buildConfigField "String", "NOME_APP", "\"Chef2Share\""
         }
     }
 
@@ -57,7 +88,7 @@ android {
     }
 }
 
-android.packagingOptions{
+android.packagingOptions {
     exclude 'META-INF/LICENSE.txt'
     exclude 'META-INF/notice.txt'
     exclude 'META-INF/license.txt'
@@ -81,7 +112,7 @@ dependencies {
     compile 'com.google.android.gms:play-services:8.3.0'
 
     compile 'com.google.code.gson:gson:2.2.4'
-    compile 'com.facebook.android:facebook-android-sdk:4.6.0'
+    compile 'com.facebook.android:facebook-android-sdk:[4,5)'
 
     compile 'com.mcxiaoke.volley:library-aar:1.0.0'
     compile 'com.android.support:cardview-v7:23.0.1'

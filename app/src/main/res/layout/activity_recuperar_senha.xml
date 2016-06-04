@@ -19,50 +19,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:weightSum="4"
                 >
-
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/cadastre_se_com"
-                    android:textColor="@color/branco" />
-
-                <TextView
-                    android:id="@+id/txtCadastroGoogle"
-                    android:paddingLeft="8dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/cadastre_se_com_google"
-                    android:textColor="@color/branco"
-                    android:autoLink="none"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:paddingLeft="8dp"
-                    android:paddingRight="8dp"
-                    android:text="@string/ou"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/digite_seu_email_para_recuperar_senha"
                     android:textColor="@color/branco" />
 
-                <TextView
-                    android:id="@+id/txtCadastroFacebook"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/cadastre_se_com_facebook"
-                    android:textColor="@color/branco"
-                    android:autoLink="none"
-                    />
 
             </LinearLayout>
 
-            <EditText
-                style="@style/editText"
-                android:layout_marginTop="8dp"
-                android:id="@+id/txtNome"
-                android:hint="@string/hint_nome"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
 
             <EditText
                 style="@style/editText"
@@ -73,32 +41,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
-            <EditText
-                style="@style/editText"
-                android:layout_marginTop="8dp"
-                android:id="@+id/txtSenha"
-                android:hint="@string/hint_senha"
-                android:inputType="textPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <EditText
-                style="@style/editText"
-                android:id="@+id/txtNumeroCelular"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:hint="@string/hint_numero_celular"
-                android:inputType="phone"
-                android:paddingLeft="@dimen/margin" />
 
             <Button
-                android:id="@+id/btnCadastrar"
+                android:id="@+id/btnEnviarSenha"
                 style="@style/botao_laranja"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="@string/btn_cadastrar"
+                android:text="@string/btn_enviar_senha"
                 android:textColor="@color/branco"
                 />
 
@@ -132,8 +82,6 @@
                     />
 
             </LinearLayout>
-
-
 
         </LinearLayout>
 

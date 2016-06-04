@@ -219,8 +219,10 @@ public class MapaActivity extends SuperActivity implements OnMapReadyCallback {
             }
         }
 
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(markerFirst.getPosition(), ZOOM_MAPA));
-        markerFirst.showInfoWindow();
+        if(markerFirst != null) {
+            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(markerFirst.getPosition(), ZOOM_MAPA));
+            markerFirst.showInfoWindow();
+        }
     }
 
     @Background

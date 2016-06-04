@@ -31,6 +31,9 @@ import br.com.chef2share.activity.DadosCadastraisActivity;
 import br.com.chef2share.activity.DadosCadastraisActivity_;
 import br.com.chef2share.activity.EventosQueOferecoActivity_;
 import br.com.chef2share.activity.EventosQueVouActivity_;
+import br.com.chef2share.activity.FerramentasActivity;
+import br.com.chef2share.activity.FerramentasActivity_;
+import br.com.chef2share.activity.FuncionalidadesActivity_;
 import br.com.chef2share.activity.HomeActivity_;
 import br.com.chef2share.activity.MensagemActivity;
 import br.com.chef2share.activity.MensagemActivity_;
@@ -53,7 +56,7 @@ public class FragmentMenuPrincipal extends SuperFragment {
     @ViewById public TextView tNomeUsuario;
     @ViewById public ListView listViewMenu;
     @ViewById public RoundedImageView imgMeuPerfilFoto;
-    @ViewById public Button btnCriarGerenciarEvento;
+    @ViewById public Button btnDivulgueEVenda;
     @ViewById public Button btnBuscarEComprarEvento;
 
     private MenuPerfilAdapter adapter;
@@ -66,7 +69,7 @@ public class FragmentMenuPrincipal extends SuperFragment {
         super.init();
 
         btnBuscarEComprarEvento.setVisibility(View.GONE);
-        btnCriarGerenciarEvento.setVisibility(View.VISIBLE);
+        btnDivulgueEVenda.setVisibility(View.VISIBLE);
 
         Usuario usuario = UsuarioService.getUsuario(getContext());
         String urlImgChef = SuperCloudinery.getUrlImgPessoa(getContext(), usuario.getImagem());
@@ -95,15 +98,15 @@ public class FragmentMenuPrincipal extends SuperFragment {
         SuperApplication.getInstance().getSuperCache().setTipoAcesso(SuperCache.TipoAcesso.USUARIO);
         adapter.refresh(MenuPerfil.getList());
         btnBuscarEComprarEvento.setVisibility(View.GONE);
-        btnCriarGerenciarEvento.setVisibility(View.VISIBLE);
+        btnDivulgueEVenda.setVisibility(View.VISIBLE);
     }
 
-    @Click(R.id.btnCriarGerenciarEvento)
+    @Click(R.id.btnDivulgueEVenda)
     public void onClickCriarGerenciarEvento(View v){
         SuperApplication.getInstance().getSuperCache().setTipoAcesso(SuperCache.TipoAcesso.CHEF);
         adapter.refresh(MenuPerfil.getListChef());
         btnBuscarEComprarEvento.setVisibility(View.VISIBLE);
-        btnCriarGerenciarEvento.setVisibility(View.GONE);
+        btnDivulgueEVenda.setVisibility(View.GONE);
     }
 
     @ItemClick
@@ -114,10 +117,12 @@ public class FragmentMenuPrincipal extends SuperFragment {
                 break;
 
             case R.string.menu_perfil_chef:
+            case R.string.menu_perfil_anunciante:
                 AppUtil.show(getContext(), PerfilChefActivity_.class);
                 break;
 
             case R.string.menu_criar_um_evento:
+            case R.string.menu_criar_um_anuncio:
                 //zera o que tinha em memória do evento
                 SuperApplication.getSuperCache().setEvento(null);
                 SuperApplication.getSuperCache().setCadastro(null);
@@ -125,14 +130,19 @@ public class FragmentMenuPrincipal extends SuperFragment {
                 break;
 
             case R.string.menu_eventos_que_ofereco:
+            case R.string.menu_gerencie_seus_anuncios:
                 SuperUtil.show(getContext(), EventosQueOferecoActivity_.class);
                 break;
 
             case R.string.menu_perfil_ajuda:
                 AppUtil.show(getContext(), AjudaActivity_.class);
                 break;
+            case R.string.menu_perfil_ferramentas:
+                AppUtil.show(getContext(), FerramentasActivity_.class);
+                break;
 
             case R.string.menu_perfil_buscar_eventos:
+            case R.string.menu_perfil_procurar:
                 SuperUtil.show(getContext(), BuscaEventosActivity_.class);
                 break;
 
@@ -140,11 +150,15 @@ public class FragmentMenuPrincipal extends SuperFragment {
                 break;
 
             case R.string.menu_perfil_eventos_que_vou:
+            case R.string.menu_perfil_meus_pedidos:
                 SuperUtil.show(getContext(), EventosQueVouActivity_.class);
                 break;
 
             case R.string.menu_perfil_mensagens:
                 SuperUtil.show(getContext(), MensagemActivity_.class);
+                break;
+            case R.string.menu_perfil_funcionalidades:
+                AppUtil.show(getContext(), FuncionalidadesActivity_.class);
                 break;
 
             case R.string.menu_perfil_sair:

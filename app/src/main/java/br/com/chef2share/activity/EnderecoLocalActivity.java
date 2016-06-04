@@ -69,7 +69,7 @@ public class EnderecoLocalActivity extends SuperActivityMainMenu {
 
         passo1 = SuperApplication.getInstance().getSuperCache().getEvento().getPasso1();
 
-        this.mPlaceArrayAdapter = new PlaceArrayAdapter(getBaseContext(), R.layout.item_spinner_drodown, /*BOUNDS_CURITIBA*/ null, null);
+        this.mPlaceArrayAdapter = new PlaceArrayAdapter(this, R.layout.item_spinner_drodown, /*BOUNDS_CURITIBA*/ null, null);
         mGoogleApiClient = new GoogleApiClient
                 .Builder(getBaseContext())
                 .addApi(Places.GEO_DATA_API)

@@ -1,5 +1,6 @@
 package br.com.chef2share.adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.database.Cursor;
 import android.util.Log;
@@ -34,7 +35,7 @@ public class PlaceArrayAdapter extends ArrayAdapter<PlaceArrayAdapter.PlaceAutoc
     private AutocompleteFilter mPlaceFilter;
     private LatLngBounds mBounds;
     private ArrayList<PlaceAutocomplete> mResultList;
-    private Context context;
+    private Activity context;
 
     /**
      * Constructor
@@ -44,7 +45,7 @@ public class PlaceArrayAdapter extends ArrayAdapter<PlaceArrayAdapter.PlaceAutoc
      * @param bounds   Used to specify the search bounds
      * @param filter   Used to specify place types
      */
-    public PlaceArrayAdapter(Context context, int resource, LatLngBounds bounds, AutocompleteFilter filter) {
+    public PlaceArrayAdapter(Activity context, int resource, LatLngBounds bounds, AutocompleteFilter filter) {
         super(context, resource);
         this.context = context;
         mBounds = bounds;
@@ -115,10 +116,20 @@ public class PlaceArrayAdapter extends ArrayAdapter<PlaceArrayAdapter.PlaceAutoc
             protected void publishResults(CharSequence constraint, FilterResults results) {
                 if (results != null && results.count > 0) {
                     // The API returned at least one result, update the data.
-                    notifyDataSetChanged();
+                    context.runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            notifyDataSetChanged();
+                        }
+                    });
                 } else {
                     // The API did not return any results, invalidate the data set.
-                    notifyDataSetInvalidated();
+                    context.runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            notifyDataSetInvalidated();
+                        }
+                    });
                 }
             }
         };

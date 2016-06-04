@@ -69,19 +69,21 @@
         android:background="@drawable/bt_laranja_background"
         android:drawableRight="@drawable/ic_search"
         android:paddingRight="@dimen/margin"
-        android:text="@string/btn_buscar_e_comprar_evento"
-        android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+        android:text="@string/btn_procure_e_compre"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:textStyle="bold"
         android:textColor="@color/branco" />
 
     <Button
-        android:id="@+id/btnCriarGerenciarEvento"
+        android:id="@+id/btnDivulgueEVenda"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bt_laranja_background"
         android:drawableRight="@drawable/ic_icone_chef_menu_logado"
         android:paddingRight="@dimen/margin"
-        android:text="@string/btn_criar_gerenciar_evento"
-        android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+        android:text="@string/btn_divulgue_e_venda"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:textStyle="bold"
         android:textColor="@color/branco" />
 
 

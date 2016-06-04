@@ -1,0 +1,22 @@
+Jonas,
+Boa tarde!
+
+Segue Login/Senha da conta do Google e Facebook para gerar as chaves.
+Google e Facebook são iguais.
+
+Homologação
+login: chef2share.homolog@gmail.com, senha: ch3f25h@r3
+
+Produção
+login: chef2share@gmail.com, senha: wasys4321
+
+#Google Maps:
+AIzaSyB_9LpTw1r4OzrndQWNLodl4sU6ql6drwU
+
+#Google Cloud Message:
+Server API Key
+help
+AIzaSyDaRQOI2piMO8vsAolMjglnSPU-mXfVvzE
+Sender ID
+help
+640727865067

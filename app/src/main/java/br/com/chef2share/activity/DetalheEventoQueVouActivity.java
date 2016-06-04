@@ -246,34 +246,36 @@ public class DetalheEventoQueVouActivity extends SuperActivity  implements OnMap
 
             List<QRCode> list = hash.get(titulo);
             for (QRCode qrcode : list) {
-                View convertView = inflater.inflate(R.layout.ingresso_item, null);
+                if(qrcode != null) {
+                    View convertView = inflater.inflate(R.layout.ingresso_item, null);
 
-                TextView txtCodigoConvite = (TextView) convertView.findViewById(R.id.txtCodigoConvite);
-                TextView txtNomeConvite = (TextView) convertView.findViewById(R.id.txtNomeConvite);
-                ImageView imgQRCodeConvite = (ImageView) convertView.findViewById(R.id.imgQRCodeConvite);
-                final ProgressBar progressImgQRCode = (ProgressBar) convertView.findViewById(R.id.progressImgQRCode);
+                    TextView txtCodigoConvite = (TextView) convertView.findViewById(R.id.txtCodigoConvite);
+                    TextView txtNomeConvite = (TextView) convertView.findViewById(R.id.txtNomeConvite);
+                    ImageView imgQRCodeConvite = (ImageView) convertView.findViewById(R.id.imgQRCodeConvite);
+                    final ProgressBar progressImgQRCode = (ProgressBar) convertView.findViewById(R.id.progressImgQRCode);
 
-                imgQRCodeConvite.getLayoutParams().height = 800;
-                imgQRCodeConvite.getLayoutParams().width = 800;
+                    imgQRCodeConvite.getLayoutParams().height = 800;
+                    imgQRCodeConvite.getLayoutParams().width = 800;
 
-                txtCodigoConvite.setText("#" + qrcode.getText());
-                if(StringUtils.isNotEmpty(qrcode.getUrl())) {
-                    Picasso.with(getBaseContext()).load(qrcode.getUrl()).resize(800, 800).centerCrop().into(imgQRCodeConvite, new Callback() {
-                        @Override
-                        public void onSuccess() {
-                            progressImgQRCode.setVisibility(View.GONE);
-                        }
+                    txtCodigoConvite.setText("#" + qrcode.getText());
+                    if (StringUtils.isNotEmpty(qrcode.getUrl())) {
+                        Picasso.with(getBaseContext()).load(qrcode.getUrl()).resize(800, 800).centerCrop().into(imgQRCodeConvite, new Callback() {
+                            @Override
+                            public void onSuccess() {
+                                progressImgQRCode.setVisibility(View.GONE);
+                            }
 
-                        @Override
-                        public void onError() {
-                            progressImgQRCode.setVisibility(View.GONE);
-                        }
-                    });
-                }else{
-                    progressImgQRCode.setVisibility(View.GONE);
+                            @Override
+                            public void onError() {
+                                progressImgQRCode.setVisibility(View.GONE);
+                            }
+                        });
+                    } else {
+                        progressImgQRCode.setVisibility(View.GONE);
+                    }
+
+                    layoutAddConvites.addView(convertView);
                 }
-
-                layoutAddConvites.addView(convertView);
             }
 
         }

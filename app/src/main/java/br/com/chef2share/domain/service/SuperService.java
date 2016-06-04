@@ -17,6 +17,7 @@ import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.EBean;
 import org.json.JSONObject;
 
+import br.com.chef2share.BuildConfig;
 import br.com.chef2share.R;
 import br.com.chef2share.SuperApplication;
 import br.com.chef2share.SuperUtil;
@@ -40,12 +41,12 @@ public class SuperService {
 //    @Bean
 //    public TransacaoCallback transacaoCallback;
 
-//    public static final String URL = "http://192.168.100.10:8080/chef2share/mb";
-//    public static final String URL = "http://mlife02.wasys.com.br:8080/c2shmg";
-    public static final String URL = "http://www.chef2share.com.br/chef2share";
+    public static final String URL = BuildConfig.URL;
     public static final String PATH_MOBILE = "/mb";
     public static final String PATH_AJUDA = "/ajuda.xhtml?client=webview";
     public static final String PATH_TERMOS = "/termos.xhtml?client=webview";
+    public static final String PATH_FUNCIONALIDADES = "/funcionalidades.xhtml?client=webview&login=";
+    public static final String PATH_FERRAMENTAS = "/ferramentas.xhtml?client=webview&login=";
 
 
     public static final boolean SIMULA_SERVER = false;
@@ -87,6 +88,11 @@ public class SuperService {
         PERFIL_CHEF_ATUALIZAR("/chef/atualizar"),
         PERFIL_CHEF_ATUALIZAR_FOTO("/chef/foto/salvar"),
 
+        /**
+         * Mehorias
+         */
+        USUARIO_RECUPERAR_SENHA("/usuario/recuperarSenha"),
+
         ;
 
 
@@ -118,8 +124,17 @@ public class SuperService {
     public String getURLTermosDeUso() {
         return URL + PATH_TERMOS;
     }
+
     public String getURLAjuda() {
         return URL + PATH_AJUDA;
+    }
+
+    public String getURLFuncionalidades(Context context) {
+        return URL + PATH_FUNCIONALIDADES + UsuarioService.getUsuario(context).getEmail();
+    }
+
+    public String getURLFerramentas(Context context) {
+        return URL + PATH_FERRAMENTAS + UsuarioService.getUsuario(context).getEmail();
     }
 
 

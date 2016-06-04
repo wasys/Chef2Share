@@ -33,7 +33,7 @@ public class SplashActivity extends SuperActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Thread.setDefaultUncaughtExceptionHandler(new SuperExceptionHandler(this));
-        toast("v" + AndroidUtils.getAppVersionName(getBaseContext()));
+//        toast("v" + AndroidUtils.getAppVersionName(getBaseContext()));
     }
 
     @Override

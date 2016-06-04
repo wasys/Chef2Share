@@ -2,11 +2,14 @@ package br.com.chef2share.activity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.IntentSender;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.android.utils.lib.exception.DomainException;
 import com.android.utils.lib.infra.AppUtil;
 import com.android.utils.lib.utils.StringUtils;
 import com.facebook.CallbackManager;
@@ -18,19 +21,31 @@ import com.facebook.ProfileTracker;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
+import com.google.android.gms.auth.GoogleAuthException;
+import com.google.android.gms.auth.GoogleAuthUtil;
+import com.google.android.gms.auth.UserRecoverableAuthException;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.common.Scopes;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.plus.Plus;
+import com.google.android.gms.plus.model.people.Person;
 
+import org.androidannotations.annotations.Background;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
+import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Arrays;
 
 import br.com.chef2share.R;
@@ -62,6 +77,8 @@ public class EntrarActivity extends SuperActivity {
     public static final int NOVO_CADASTRO_RESULT = 8000;
 
     private static final int LOGIN_GOOGLE_RESULT = 9001;
+    private static final int GOOGLE_AUTH_UTIL_RESULT = 10000;
+    private ConnectionResult mConnectionResult;
     private GoogleApiClient mGoogleApiClient;
     private GoogleSignInOptions gso;
 
@@ -71,62 +88,125 @@ public class EntrarActivity extends SuperActivity {
 
         FacebookSdk.sdkInitialize(getApplicationContext());
         callbackManager = CallbackManager.Factory.create();
-//        profileTracker = new ProfileTracker() {
-//            @Override
-//            protected void onCurrentProfileChanged(
-//                    Profile oldProfile,
-//                    Profile currentProfile) {
-//
-//            }
-//        };
 
-        gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestEmail()
-                .build();
+//        gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+//                .requestEmail()
+//                .build();
+
 
         mGoogleApiClient = new GoogleApiClient.Builder(this)
-                .enableAutoManage(this, new GoogleApiClient.OnConnectionFailedListener() {
-                    @Override
-                    public void onConnectionFailed(ConnectionResult connectionResult) {
+                .addConnectionCallbacks(onCallBackLoginGooglePlus())
+                .addOnConnectionFailedListener(onConnectionFail()).addApi(Plus.API)
+//                .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
+                .addScope(Plus.SCOPE_PLUS_LOGIN).build();
+    }
 
-                    }
-                })
-                .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
-                .build();
+    private GoogleApiClient.OnConnectionFailedListener onConnectionFail() {
+        return new GoogleApiClient.OnConnectionFailedListener() {
+            @Override
+            public void onConnectionFailed(ConnectionResult connectionResult) {
+                if (!connectionResult.hasResolution()) {
+                    GooglePlayServicesUtil.getErrorDialog(connectionResult.getErrorCode(), EntrarActivity.this, 0).show();
+                    return;
+                }
+
+                mConnectionResult = connectionResult;
+                resolveSignInError();
+            }
+        };
+    }
+
+    private GoogleApiClient.ConnectionCallbacks onCallBackLoginGooglePlus() {
+        return new GoogleApiClient.ConnectionCallbacks() {
+            @Override
+            public void onConnected(Bundle bundle) {
+                if (Plus.PeopleApi.getCurrentPerson(mGoogleApiClient) != null) {
+
+                    getAccessToken();
+
+
+                } else {
+                    resolveSignInError();
+                }
+            }
+
+            @Override
+            public void onConnectionSuspended(int i) {
+
+            }
+        };
+    }
+
+    /**
+     * Recupera o accessToken do login realizado no Google Plus
+     */
+    @Background
+    public void getAccessToken() {
+
+        String email = Plus.AccountApi.getAccountName(mGoogleApiClient);
+
+        try {
+            URL url = new URL("https://www.googleapis.com/oauth2/v1/userinfo");
+            String sAccessToken = GoogleAuthUtil.getToken(
+                    this,
+                    email + "",
+                    "oauth2:"
+                            + Plus.SCOPE_PLUS_PROFILE + " "
+                            + "https://www.googleapis.com/auth/plus.login" + " "
+                            + "https://www.googleapis.com/auth/plus.profile.emails.read");
+
+            Person currentPerson = Plus.PeopleApi.getCurrentPerson(mGoogleApiClient);
+            doInBackground(getTransacaoLoginGoogle(currentPerson, sAccessToken), true, R.string.infra_msg_aguarde, false);
+
+        /**
+         * A primeira vez vai lançar uma exceçao de permissão
+         */
+        } catch (UserRecoverableAuthException e) {
+            e.printStackTrace();
+            Intent recover = e.getIntent();
+            startActivityForResult(recover, GOOGLE_AUTH_UTIL_RESULT);
+
+        } catch (GoogleAuthException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Method to resolve any signin errors
+     * */
+    private void resolveSignInError() {
+        if (mConnectionResult != null && mConnectionResult.hasResolution()) {
+            try {
+                mConnectionResult.startResolutionForResult(this, LOGIN_GOOGLE_RESULT);
+            } catch (IntentSender.SendIntentException e) {
+                mGoogleApiClient.connect();
+            }
+        }
     }
 
     @Override
     public void init() {
         super.init();
-        btnLogarGooglePlus.setScopes(gso.getScopeArray());
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-//        OptionalPendingResult<GoogleSignInResult> opr = Auth.GoogleSignInApi.silentSignIn(mGoogleApiClient);
-//        if (opr.isDone()) {
-//            GoogleSignInResult result = opr.get();
-//            handleSignInResult(result);
-//        } else {
-//            opr.setResultCallback(new ResultCallback<GoogleSignInResult>() {
-//                @Override
-//                public void onResult(GoogleSignInResult googleSignInResult) {
-//                    handleSignInResult(googleSignInResult);
-//                }
-//            });
-//        }
     }
 
     @Override
     protected void onStop() {
         super.onStop();
+        if (mGoogleApiClient.isConnected()) {
+            mGoogleApiClient.disconnect();
+        }
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-//        profileTracker.stopTracking();
     }
 
     @Click(R.id.btnLogarFacebook)
@@ -152,14 +232,15 @@ public class EntrarActivity extends SuperActivity {
                         SuperUtil.toast(getBaseContext(), "onError");
                     }
                 });
-
     }
 
     @Click(R.id.btnLogarGooglePlus)
     public void onClickLoginGoogle(View v) {
         logInfo("Login Google+");
-        Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
-        startActivityForResult(signInIntent, LOGIN_GOOGLE_RESULT);
+//        Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
+//        startActivityForResult(signInIntent, LOGIN_GOOGLE_RESULT);
+        mGoogleApiClient.connect();
+        resolveSignInError();
     }
 
     @Click(R.id.btnEntrar)
@@ -217,13 +298,19 @@ public class EntrarActivity extends SuperActivity {
         startActivityForResult(i, NOVO_CADASTRO_RESULT);
     }
 
+    @Click(R.id.txtRecuperarSenha)
+    public void onClickRecuperarSenha(View v){
+        SuperUtil.show(getBaseContext(), RecuperarSenhaActivity_.class);
+    }
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
 
         switch (requestCode){
             case LOGIN_GOOGLE_RESULT:
-                GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
-                handleSignInResult(result);
+                if (!mGoogleApiClient.isConnecting()) {
+                    mGoogleApiClient.connect();
+                }
                 break;
 
             case EntrarActivity.NOVO_CADASTRO_RESULT:
@@ -240,6 +327,9 @@ public class EntrarActivity extends SuperActivity {
                     }
                 }
                 break;
+            case EntrarActivity.GOOGLE_AUTH_UTIL_RESULT:
+                getAccessToken();
+                break;
 
             default:
                 callbackManager.onActivityResult(requestCode, resultCode, data);
@@ -248,48 +338,43 @@ public class EntrarActivity extends SuperActivity {
         }
     }
 
-    private void handleSignInResult(final GoogleSignInResult result) {
-        doInBackground(getTransacaoLoginGoogle(result), true, R.string.infra_msg_aguarde, false);
-    }
 
-    public Transacao getTransacaoLoginGoogle(final GoogleSignInResult result) {
+    public Transacao getTransacaoLoginGoogle(final Person person, final String sAccessToken) {
 
         return new Transacao() {
 
             @Override
             public void execute() throws Exception {
-                if (result.isSuccess()) {
 
-                    GoogleSignInAccount acct = result.getSignInAccount();
 
-                    LoginGoogle loginGoogle = new LoginGoogle();
-                    loginGoogle.setAccessToken(acct.getIdToken());
-                    loginGoogle.setUserID(acct.getId());
+                LoginGoogle loginGoogle = new LoginGoogle();
+                loginGoogle.setAccessToken(sAccessToken);
+                loginGoogle.setUserID(person.getId());
 
-                    Device device = new Device();
-                    device.setSender(SuperService.getPushID(getBaseContext()));
-                    device.setSo("ANDROID");
-                    loginGoogle.setDevice(device);
+                Device device = new Device();
+                device.setSender(SuperService.getPushID(getBaseContext()));
+                device.setSo("ANDROID");
+                loginGoogle.setDevice(device);
 
-                    JSONObject json = SuperGson.toJSONObject(loginGoogle);
-                    superService.sendRequest(getBaseContext(), superActivity, superActivity, SuperService.TipoTransacao.LOGIN_GOOGLE, json);
+                JSONObject json = SuperGson.toJSONObject(loginGoogle);
+                superService.sendRequest(getBaseContext(), superActivity, superActivity, SuperService.TipoTransacao.LOGIN_GOOGLE, json);
 
-                    /*
-                    Usuario usuario = new Usuario();
-                    usuario.setEmail(acct.getEmail());
-                    usuario.setGoogleId(acct.getId());
-                    usuario.setFoto(acct.getPhotoUrl().toString());
-                    usuario.setNome(acct.getDisplayName());
-                    usuario.setAccessToken(acct.getIdToken());
-                    usuario.setPushId(SuperService.getPushID(getBaseContext()));
-                    */
-                }
+
+                /*
+                Usuario usuario = new Usuario();
+                usuario.setEmail(acct.getEmail());
+                usuario.setGoogleId(acct.getId());
+                usuario.setFoto(acct.getPhotoUrl().toString());
+                usuario.setNome(acct.getDisplayName());
+                usuario.setAccessToken(acct.getIdToken());
+                usuario.setPushId(SuperService.getPushID(getBaseContext()));
+                */
             }
 
             @Override
             public void onSuccess(Response response) {
                 Usuario usuario = response.getUsuario();
-                usuario.setFacebookId(result.getSignInAccount().getId());
+                usuario.setFacebookId(person.getId());
                 UsuarioService.saveOrUpdate(getBaseContext(), response.getUsuario());
                 SuperUtil.show(getBaseContext(), HomeActivity_.class);
                 finish();

@@ -14,6 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/icon_tab_messages"
+        android:tint="@color/chef_cinza_claro"
         />
 
 

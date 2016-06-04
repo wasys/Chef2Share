@@ -13,13 +13,14 @@
 
     <!-- B -->
     <string name="btn_entrar">Entrar</string>
+    <string name="btn_divulgue_e_venda">Divulgue e Venda</string>
     <string name="btn_cadastrar">Cadastrar</string>
     <string name="btn_salvar">Salvar</string>
     <string name="btn_alterar_senha">Alterar senha</string>
     <string name="btn_google_plus_logout">Sair</string>
     <string name="btn_buscar_e_comprar_evento">Buscar e comprar um evento</string>
     <string name="btn_criar_gerenciar_evento">Criar e gerenciar um evento</string>
-    <string name="btn_procurar_eventos">PROCURAR EVENTOS</string>
+    <string name="btn_procurar_eventos">PROCURAR</string>
     <string name="btn_mostrar_filtros">Mostrar filtros</string>
     <string name="btn_filtrar">Filtrar</string>
     <string name="btn_salvar_filtros">Salvar filtros</string>
@@ -42,6 +43,10 @@
     <string name="btn_publicar_evento">Publicar evento</string>
     <string name="btn_divulgar_evento">Divulgar evento</string>
     <string name="btn_confirmar_checkin">Confirmar checkin</string>
+    <string name="btn_google_entrar">Entrar com o Google</string>
+    <string name="btn_facebook_entrar">Entrar com o Facebook</string>
+    <string name="btn_enviar_senha">Enviar senha</string>
+    <string name="btn_procure_e_compre">Procure e Compre</string>
 
 
     <string name="busca_tipo_evento">Tipo do evento</string>
@@ -124,6 +129,7 @@
     <string name="data">Data:</string>
     <string name="descricao">Descrição</string>
     <string name="detalhes">Detalhes</string>
+    <string name="digite_seu_email_para_recuperar_senha">Digite seu e-mail para recuperar a senha</string>
 
     <!-- E -->
     <string name="entrar_com">Entrar com</string>
@@ -131,10 +137,11 @@
     <string name="evento_realizado">Evento Realizado</string>
     <string name="evento_quantidade_localizados">Foram localizados %1$d eventos.</string>
     <string name="enviar">Enviar</string>
+    <string name="esqueceu_sua_senha">Esqueceu sua senha?</string>
+    <string name="esqueceu_sua_senha_recupere_aqui"><u>Recupere aqui</u></string>
 
     <!-- F -->
     <string name="facebook">Facebook</string>
-    <string name="facebook_app_id">1061925513842281</string>
     <string name="fotos_local">Fotos do local</string>
     <string name="foto_principal_destaque">Foto principal para destaque.</string>
     <string name="foto_divulgacao_emails_redes_sociais">Foto divulgação para emails e redes sociais.</string>
@@ -164,6 +171,7 @@
     <string name="hint_digite_o_nome">Digite o nome</string>
     <string name="hint_digite_a_mensagem">Digite a mensagem...</string>
     <string name="hint_descricao_cardapio">Ex: Entrada: Misto de Folhas Verdes.  Prato Principal: Ostras gratinadas com arroz... Sobremesa: Abacaxi Flambado com Conhaque</string>
+    <string name="hint_numero_celular">Número do celular</string>
 
     <!-- I -->
     <string name="infra_msg_aguarde">Aguarde …</string>
@@ -193,17 +201,25 @@
     <string name="menu_cadastro">Cadastro</string>
     <string name="menu_perfil">Perfil</string>
     <string name="menu_perfil_buscar_eventos">Buscar eventos</string>
+    <string name="menu_perfil_procurar">Procurar</string>
     <string name="menu_perfil_convide_chef">Convide um chef</string>
     <string name="menu_perfil_eventos_que_vou">Eventos que vou</string>
+    <string name="menu_perfil_meus_pedidos">Meus Pedidos</string>
+    <string name="menu_perfil_funcionalidades">Funcionalidades</string>
     <string name="menu_perfil_mensagens">Mensagens</string>
     <string name="menu_perfil_ajuda">Ajuda</string>
     <string name="menu_perfil_sair">Sair</string>
     <string name="menu_perfil_chef">Perfil do chef</string>
+    <string name="menu_perfil_anunciante">Perfil do Anunciante</string>
     <string name="menu_criar_um_evento">Criar um evento</string>
+    <string name="menu_criar_um_anuncio">Criar um Anúncio</string>
     <string name="menu_eventos_que_ofereco">Eventos que ofereço</string>
+    <string name="menu_gerencie_seus_anuncios">Gerencie seus Anúncios</string>
+    <string name="menu_perfil_ferramentas">Ferramentas</string>
     <string name="msg_validacao_nome">Informe o nome</string>
     <string name="msg_validacao_email">Informe o e-email</string>
     <string name="msg_validacao_senha">Informe a senha</string>
+    <string name="msg_validacao_numero_celular">Informe o número do celular</string>
     <string name="msg_validacao_senha_confirmacao">Informe novamente a senha</string>
     <string name="msg_validacao_qtde_ingressos">Informe a quantidade desejada de ingressos</string>
     <string name="msg_senha_alterada_com_sucesso">Senha alterada com sucesso</string>
@@ -308,8 +324,10 @@
     <string name="titulo_eventos_que_ofereco">Eventos que ofereço</string>
     <string name="titulo_acompanhe">Acompanhe</string>
     <string name="titulo_termos_de_uso">Termos de uso</string>
+    <string name="titulo_funcionalidades">Funcionalidades</string>
     <string name="termos_de_uso">Ver Termos de uso</string>
     <string name="texto_info_publicacao">O Chef2Share irá descontar 10% ou R$ 3,50 de cada ingresso comprado a título de intermediação.\n\nA nota fiscal relativa ao evento deverá ser fornecida pelo chef ao convidado no dia da realização do evento. </string>
+    <string name="titulo_ferramentas">Ferramentas</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

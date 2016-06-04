@@ -70,6 +70,11 @@ public class Chef2ShareJSONRequest extends JsonObjectRequest {
         headers.put("deviceModel", Build.MODEL);
         headers.put("deviceAppVersion", AndroidUtils.getAppVersionName(context));
         headers.put("Content-Type", "application/json");
+
+        if(headers != null) {
+            SuperUtil.log("####HEADERS " + headers);
+        }
+
         return headers;
     }
 
@@ -79,9 +84,7 @@ public class Chef2ShareJSONRequest extends JsonObjectRequest {
 
         if(body != null) {
             String s = new String(body);
-            SuperUtil.log("\n");
-            SuperUtil.log("REQUEST " + s);
-            SuperUtil.log("\n");
+            SuperUtil.log("####REQUEST " + s);
         }
 
         return body;
