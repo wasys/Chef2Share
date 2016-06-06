@@ -59,8 +59,8 @@ public class EventosQueOferecoActivity extends SuperActivity implements OnSelect
     public void init() {
         super.init();
 
-        buscaVo.setPeriodoDe(DateUtils.toString(DateUtils.addDia(new Date(), -365), DateUtils.DATE_BD));
-        buscaVo.setPeriodoAte(DateUtils.toString(DateUtils.addDia(new Date(), 365), DateUtils.DATE_BD));
+        buscaVo.setPeriodoDe(DateUtils.toString(DateUtils.addDia(new Date(), -7), DateUtils.DATE_BD));
+        buscaVo.setPeriodoAte(DateUtils.toString(DateUtils.addDia(new Date(), 30), DateUtils.DATE_BD));
 
         eventoadapter = new EventoQueOferecoRecyclerViewAdapter(this, this);
 

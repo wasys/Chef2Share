@@ -112,13 +112,13 @@ public class CompraEventoActivity extends SuperActivity  {
                     return;
                 }
                 if(reserva.getPedido().getStatus() == StatusPedido.RESERVADO){
-                    SuperUtil.alertDialog(activity, "Sua reserva foi realizada com sucesso. Você será direcionado para a página de pagamento.", new Runnable() {
-                        @Override
-                        public void run() {
+//                    SuperUtil.alertDialog(activity, "Sua reserva foi realizada com sucesso. Você será direcionado para a página de pagamento.", new Runnable() {
+//                        @Override
+//                        public void run() {
                             doInBackground(getResumoPedido(reserva.getPedido()), true);
-                        }
-                    });
-                    return;
+//                        }
+//                    });
+//                    return;
                 }
             }
 

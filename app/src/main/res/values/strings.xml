@@ -47,6 +47,7 @@
     <string name="btn_facebook_entrar">Entrar com o Facebook</string>
     <string name="btn_enviar_senha">Enviar senha</string>
     <string name="btn_procure_e_compre">Procure e Compre</string>
+    <string name="btn_solicitar_em_outra_data">Solicitar em outra data</string>
 
 
     <string name="busca_tipo_evento">Tipo do evento</string>
@@ -139,6 +140,7 @@
     <string name="enviar">Enviar</string>
     <string name="esqueceu_sua_senha">Esqueceu sua senha?</string>
     <string name="esqueceu_sua_senha_recupere_aqui"><u>Recupere aqui</u></string>
+    <string name="estacionamento">Estacionamento</string>
 
     <!-- F -->
     <string name="facebook">Facebook</string>
@@ -311,23 +313,25 @@
     <!-- T -->
     <string name="titulo_cadastro">Cadastro</string>
     <string name="titulo_perfil_chef">Perfil do chef</string>
-    <string name="titulo_buscar_eventos">Buscar Eventos</string>
+    <string name="titulo_buscar_eventos">Procurar</string>
     <string name="titulo_buscar_eventos_mapa">Eventos no mapa</string>
     <string name="titulo_comprar">Comprar</string>
     <string name="titulo_pagamento">Pagamento</string>
     <string name="titulo_ajuda">Ajuda</string>
-    <string name="titulo_eventos_que_vou">Eventos que vou</string>
+    <string name="titulo_eventos_que_vou">Meus Pedidos</string>
     <string name="titulo_detalhes_compra">Detalhes da compra</string>
     <string name="titulo_criar_evento">Crie seu evento</string>
     <string name="titulo_endereco">Endereço</string>
     <string name="titulo_mensagens">Mensagens</string>
-    <string name="titulo_eventos_que_ofereco">Eventos que ofereço</string>
+    <string name="titulo_eventos_que_ofereco">Meus Anúncios</string>
     <string name="titulo_acompanhe">Acompanhe</string>
     <string name="titulo_termos_de_uso">Termos de uso</string>
     <string name="titulo_funcionalidades">Funcionalidades</string>
+    <string name="titulo_perfil_anunciante">Perfil do Anunciante</string>
     <string name="termos_de_uso">Ver Termos de uso</string>
     <string name="texto_info_publicacao">O Chef2Share irá descontar 10% ou R$ 3,50 de cada ingresso comprado a título de intermediação.\n\nA nota fiscal relativa ao evento deverá ser fornecida pelo chef ao convidado no dia da realização do evento. </string>
     <string name="titulo_ferramentas">Ferramentas</string>
+    <string name="titulo_solicitar_evento">Solicitar evento</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

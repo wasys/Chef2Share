@@ -38,11 +38,7 @@ public class Chef2ShareJSONRequest extends JsonObjectRequest {
     public Chef2ShareJSONRequest(Context context, int method, String url, JSONObject jsonRequest, com.android.volley.Response.Listener<JSONObject> responseListener, com.android.volley.Response.ErrorListener errorListener) {
         super(method, url, jsonRequest, responseListener, errorListener);
 
-        SuperUtil.log("\n");
-        SuperUtil.log("\n");
-        SuperUtil.log("URL " + url);
-        SuperUtil.log("\n");
-        SuperUtil.log("\n");
+        SuperUtil.log("####URL " + url);
 
         this.context = context;
         this.usuario = UsuarioService.getUsuario(context);

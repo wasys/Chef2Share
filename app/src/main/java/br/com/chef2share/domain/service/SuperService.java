@@ -47,6 +47,7 @@ public class SuperService {
     public static final String PATH_TERMOS = "/termos.xhtml?client=webview";
     public static final String PATH_FUNCIONALIDADES = "/funcionalidades.xhtml?client=webview&login=";
     public static final String PATH_FERRAMENTAS = "/ferramentas.xhtml?client=webview&login=";
+    public static final String PATH_SOLICITAR_EVENTO = "/solicitarEvento.xhtml?client=webview&login=";
 
 
     public static final boolean SIMULA_SERVER = false;
@@ -137,6 +138,9 @@ public class SuperService {
         return URL + PATH_FERRAMENTAS + UsuarioService.getUsuario(context).getEmail();
     }
 
+    public String getURLSolicitarEvento(Context context) {
+        return URL + PATH_SOLICITAR_EVENTO + UsuarioService.getUsuario(context).getEmail();
+    }
 
     public void detalhesEvento(Context context, com.android.volley.Response.Listener<JSONObject> responseListener, com.android.volley.Response.ErrorListener errorListener, String eventoId) {
         TipoTransacao tipoTransacao = TipoTransacao.EVENTO_DETALHE;

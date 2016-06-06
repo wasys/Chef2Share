@@ -3,11 +3,13 @@ package br.com.chef2share.infra;
 import android.content.Context;
 import android.location.Address;
 import android.location.Geocoder;
+import android.text.Html;
 
 import com.android.utils.lib.utils.StringUtils;
 import com.google.android.gms.location.places.Place;
 
 import java.util.List;
+import java.util.Locale;
 
 import br.com.chef2share.SuperUtil;
 
@@ -81,7 +83,7 @@ public class SuperGeocoder {
     }
 
     public SuperGeocoder(Context context, Place place){
-        Geocoder geoCoder = new Geocoder(context);
+        Geocoder geoCoder = new Geocoder(context, Locale.getDefault());
         try {
             List<Address> address = geoCoder.getFromLocation(place.getLatLng().latitude, place.getLatLng().longitude, 1);
             if(address != null && address.size() > 0) {
@@ -100,5 +102,4 @@ public class SuperGeocoder {
 
         }
     }
-
 }

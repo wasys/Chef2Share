@@ -71,9 +71,9 @@ public class PerfilChefActivity extends SuperActivity  {
         super.init();
 
         setVisibilityBotaoVoltar(View.VISIBLE);
-        txtTitulo.setText(R.string.titulo_perfil_chef);
+        txtTitulo.setText(R.string.titulo_perfil_anunciante);
 
-        doInBackground(getPerfilChef(), true, R.string.msg_aguarde_carregando_perfil_chef, false);
+        doInBackground(getPerfilChef(), true, R.string.infra_msg_aguarde, false);
     }
 
     private Transacao getPerfilChef() {

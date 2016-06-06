@@ -64,12 +64,8 @@ public class EventosQueVouActivity extends SuperActivity implements OnSelectedBu
         layoutManager = new LinearLayoutManager(this);
         recyclerViewEventosQueVou.setLayoutManager(layoutManager);
 
-        /**
-         * //TODO a web nao permite trazer tudo, esse filtro maloqueiro deve ser removido quando a web permitir consultar sem range de data
-         *
-         */
-        pedidoFiltro.setPeriodoDe("01/01/2015");
-        pedidoFiltro.setPeriodoAte(DateUtils.toString(DateUtils.addDia(new Date(), 365)));
+        pedidoFiltro.setPeriodoDe(DateUtils.toString(DateUtils.addDia(new Date(), -7), DateUtils.DATE_BD));
+        pedidoFiltro.setPeriodoAte(DateUtils.toString(DateUtils.addDia(new Date(), 30), DateUtils.DATE_BD));
         doInBackground(getTransacaoPesquisa(pedidoFiltro), true);
 
     }
@@ -92,7 +88,7 @@ public class EventosQueVouActivity extends SuperActivity implements OnSelectedBu
 //                }
 //                layoutNenhumEvento.setVisibility(View.GONE);
                 UsuarioPedido usuarioPedido = response.getUsuarioPedido();
-                adapter.refresh(usuarioPedido);
+                adapter.refresh(usuarioPedido, pedidoFiltro);
                 recyclerViewEventosQueVou.setAdapter(adapter);
             }
 

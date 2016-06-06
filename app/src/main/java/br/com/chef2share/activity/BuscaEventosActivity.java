@@ -157,6 +157,10 @@ public class BuscaEventosActivity extends SuperActivity implements OnSelectedBus
             pesquisa = true;
         }
 
+        if(StringUtils.isEmpty(SuperApplication.getSuperCache().getPesquisaEvento().max)){
+            pesquisa = true;
+        }
+
         SuperApplication.getSuperCache().getPesquisaEvento().max = max;
 
         if(pesquisa){
@@ -170,6 +174,10 @@ public class BuscaEventosActivity extends SuperActivity implements OnSelectedBus
 
         boolean pesquisa = false;
         if(StringUtils.isNotEmpty(SuperApplication.getSuperCache().getPesquisaEvento().min) && !StringUtils.equalsIgnoreCase(min, SuperApplication.getSuperCache().getPesquisaEvento().min)){
+            pesquisa = true;
+        }
+
+        if(StringUtils.isEmpty(SuperApplication.getSuperCache().getPesquisaEvento().min)){
             pesquisa = true;
         }
 
@@ -279,5 +287,20 @@ public class BuscaEventosActivity extends SuperActivity implements OnSelectedBus
             txtSubTitulo.setVisibility(View.GONE);
         }
 
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+
+        SuperApplication.getSuperCache().getPesquisaEvento().min = null;
+        SuperApplication.getSuperCache().getPesquisaEvento().bairro = null;
+        SuperApplication.getSuperCache().getPesquisaEvento().cidade = null;
+        SuperApplication.getSuperCache().getPesquisaEvento().cozinha = null;
+        SuperApplication.getSuperCache().getPesquisaEvento().enderecoSearch = null;
+        SuperApplication.getSuperCache().getPesquisaEvento().estado = null;
+        SuperApplication.getSuperCache().getPesquisaEvento().max = null;
+        SuperApplication.getSuperCache().getPesquisaEvento().tipoEvento = null;
+        SuperApplication.getSuperCache().getPesquisaEvento().valorMaximo = null;
     }
 }

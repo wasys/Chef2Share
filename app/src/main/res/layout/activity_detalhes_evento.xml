@@ -276,7 +276,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="@string/btn_agende_evento_exclusico"
+                            android:text="@string/btn_solicitar_em_outra_data"
                             android:textStyle="normal" />
 
                         <LinearLayout
@@ -387,7 +387,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:layout_marginTop="8dp"
-                                android:text="@string/veja_todo_cardapio" />
+                                android:text="@string/veja_mais" />
 
 
                         </LinearLayout>

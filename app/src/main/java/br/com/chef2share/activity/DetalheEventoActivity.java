@@ -13,6 +13,7 @@ import android.widget.ProgressBar;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import com.android.utils.lib.infra.AppUtil;
 import com.android.utils.lib.utils.DateUtils;
 import com.android.utils.lib.utils.StringUtils;
 import com.google.android.gms.maps.CameraUpdate;
@@ -90,6 +91,7 @@ public class DetalheEventoActivity extends SuperActivity  implements OnMapReadyC
     @ViewById public RoundedImageView imgChef;
     @ViewById public TextView txtNomeChef;
     @ViewById public Button btnComprar;
+    @ViewById public Button btnAgendeEventoExclusivo;
 
     @ViewById public ViewPager viewPagerFotosEvento;
     @ViewById public ViewPager viewPagerFotosLocal;
@@ -240,7 +242,9 @@ public class DetalheEventoActivity extends SuperActivity  implements OnMapReadyC
             layoutEventoRealizado.setVisibility(View.VISIBLE);
             layoutEventoFuturo.setVisibility(View.GONE);
             layoutConvidados.setVisibility(View.GONE);
+            btnAgendeEventoExclusivo.setVisibility(View.VISIBLE);
         }else{
+            btnAgendeEventoExclusivo.setVisibility(View.GONE);
             layoutEventoRealizado.setVisibility(View.GONE);
             layoutEventoFuturo.setVisibility(View.VISIBLE);
             layoutConvidados.setVisibility(View.VISIBLE);
@@ -441,7 +445,7 @@ public class DetalheEventoActivity extends SuperActivity  implements OnMapReadyC
 
     @Click(R.id.btnAgendeEventoExclusivo)
     public void onClickAgendarEventoExclusivo(View v){
-
+        AppUtil.show(getBaseContext(), SolicitarEventoActivity_.class);
     }
 
     @Click(R.id.btnFaleComAnfitriao)

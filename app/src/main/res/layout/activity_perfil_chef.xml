@@ -61,7 +61,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/perfil_chef_meus_dados"
+                    android:text="@string/titulo_perfil_anunciante"
                     android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
 
 

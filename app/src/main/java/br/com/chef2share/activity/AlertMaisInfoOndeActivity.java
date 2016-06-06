@@ -25,7 +25,9 @@ public class AlertMaisInfoOndeActivity extends SuperActivity {
     @ViewById public TextView txtOnde;
     @ViewById public TextView txtOndeEndereco;
     @ViewById public TextView txtOndeDescricao;
+    @ViewById public TextView txtEstacionamento;
     @ViewById public LinearLayout layoutOndeDescricao;
+    @ViewById public LinearLayout layoutEstacionamento;
 
     @Extra("detalhes")
     public Detalhes detalhes;
@@ -49,6 +51,13 @@ public class AlertMaisInfoOndeActivity extends SuperActivity {
             setTextString(txtOndeDescricao, passo1.getDescricao());
         } else {
             layoutOndeDescricao.setVisibility(View.GONE);
+        }
+
+        if(StringUtils.isNotEmpty(passo1.getEstacionamento())){
+            layoutEstacionamento.setVisibility(View.VISIBLE);
+            setTextString(txtEstacionamento, passo1.getEstacionamento());
+        } else {
+            layoutEstacionamento.setVisibility(View.GONE);
         }
     }
 

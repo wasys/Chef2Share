@@ -80,6 +80,28 @@
 
                 </LinearLayout>
 
+                <LinearLayout
+                    android:id="@+id/layoutEstacionamento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/estacionamento"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+                        android:textColor="@color/chef_cinza_escuro" />
+
+                    <TextView
+                        android:id="@+id/txtEstacionamento"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="*" />
+
+                </LinearLayout>
+
                 <Button
                     android:id="@+id/btnFecharMaisInfoOnde"
                     style="@style/btn_entrar"

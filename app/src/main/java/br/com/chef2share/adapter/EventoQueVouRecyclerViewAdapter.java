@@ -35,6 +35,7 @@ import br.com.chef2share.domain.Passo3;
 import br.com.chef2share.domain.Pedido;
 import br.com.chef2share.domain.UsuarioPedido;
 import br.com.chef2share.domain.listener.OnSelectedBuscaFiltroEventosQueVouOptions;
+import br.com.chef2share.domain.request.PedidoFiltro;
 import br.com.chef2share.enums.StatusPedido;
 import br.com.chef2share.infra.SuperCloudinery;
 import br.com.chef2share.infra.SuperUtils;
@@ -51,6 +52,7 @@ public class EventoQueVouRecyclerViewAdapter extends RecyclerView.Adapter<Recycl
     private static UsuarioPedido usuarioPedido;
     private List<Pedido> pedidos;
     private OnSelectedBuscaFiltroEventosQueVouOptions onSelectedBuscaFiltroEventosQueVouOptions;
+    private PedidoFiltro pedidoFiltro;
 
     // Provide a suitable constructor (depends on the kind of dataset)
     public EventoQueVouRecyclerViewAdapter(EventosQueVouActivity activity, OnSelectedBuscaFiltroEventosQueVouOptions onSelectedBuscaFiltroEventosQueVouOptions) {
@@ -195,10 +197,10 @@ public class EventoQueVouRecyclerViewAdapter extends RecyclerView.Adapter<Recycl
         if(holder instanceof ViewHolderPesquisa) {
             final ViewHolderPesquisa viewHolderPesquisa = (ViewHolderPesquisa) holder;
 
-//            onSelectedBuscaFiltroEventosQueVouOptions.onSelectedMin(SuperApplication.getSuperCache().getPesquisaEventoQueVou().periodoDe);
-//            onSelectedBuscaFiltroEventosQueVouOptions.onSelectedMax(SuperApplication.getSuperCache().getPesquisaEventoQueVou().periodoAte);
+            long dataMin = DateUtils.toDate(pedidoFiltro.getPeriodoDe(), "yyyy-MM-dd").getTime();
+            long dataMax = DateUtils.toDate(pedidoFiltro.getPeriodoAte(), "yyyy-MM-dd").getTime();
 
-            setDateTimeField(viewHolderPesquisa, null, null);
+            setDateTimeField(viewHolderPesquisa, dataMin, dataMax);
 
         }else {
 
@@ -317,19 +319,16 @@ public class EventoQueVouRecyclerViewAdapter extends RecyclerView.Adapter<Recycl
         };
     }
 
-    private void setDateTimeField(final ViewHolderPesquisa viewHolderPesquisa, Date dataHoje, Date dataSemanaQueVem) {
+    private void setDateTimeField(final ViewHolderPesquisa viewHolderPesquisa, long dataMin, long dataMax) {
 
-//        if(DateUtils.isIgual(dataHoje, new Date())){
-//            viewHolderPesquisa.txtDataInicio.setText("Hoje");
-//        }else{
-//            viewHolderPesquisa.txtDataInicio.setText(DateUtils.toString(dataHoje, DateUtils.DATE));
-//        }
-//
-//        if(DateUtils.isIgual(dataSemanaQueVem, new Date())){
-//            viewHolderPesquisa.txtDataFinal.setText("Hoje");
-//        }else{
-//            viewHolderPesquisa.txtDataFinal.setText(DateUtils.toString(dataSemanaQueVem, DateUtils.DATE));
-//        }
+        Date dataMinima = new Date(dataMin);
+        if(DateUtils.isIgual(dataMinima, new Date())){
+            viewHolderPesquisa.txtDataInicio.setText("Hoje");
+        }else{
+            viewHolderPesquisa.txtDataInicio.setText(DateUtils.toString(dataMinima, DateUtils.DATE));
+        }
+        Date dataMaxima = new Date(dataMax);
+        viewHolderPesquisa.txtDataFinal.setText(DateUtils.toString(dataMaxima, DateUtils.DATE));
 
         Calendar newCalendar = Calendar.getInstance();
 
@@ -396,9 +395,10 @@ public class EventoQueVouRecyclerViewAdapter extends RecyclerView.Adapter<Recycl
         return 1;
     }
 
-    public void refresh(UsuarioPedido usuarioPedido){
+    public void refresh(UsuarioPedido usuarioPedido, PedidoFiltro pedidoFiltro){
         this.usuarioPedido = usuarioPedido;
         this.pedidos = usuarioPedido.getPedidos();
+        this.pedidoFiltro = pedidoFiltro;
         notifyDataSetChanged();
 
     }
