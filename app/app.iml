@@ -43,12 +43,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src/Chef2Share_PRODDebug/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/Chef2Share_PRODDebug/jni" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/Chef2Share_PRODDebug/rs" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/r/androidTest/Chef2Share_PROD/debug" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/aidl/androidTest/Chef2Share_PROD/debug" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/androidTest/Chef2Share_PROD/debug" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/rs/androidTest/Chef2Share_PROD/debug" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/androidTest/Chef2Share_PROD/debug" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/androidTest/Chef2Share_PROD/debug" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/testChef2Share_PRODDebug/res" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/testChef2Share_PRODDebug/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/testChef2Share_PRODDebug/assets" type="java-test-resource" />
@@ -56,6 +50,12 @@
       <sourceFolder url="file://$MODULE_DIR$/src/testChef2Share_PRODDebug/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/testChef2Share_PRODDebug/jni" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/testChef2Share_PRODDebug/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/r/androidTest/Chef2Share_PROD/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/aidl/androidTest/Chef2Share_PROD/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/androidTest/Chef2Share_PROD/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/rs/androidTest/Chef2Share_PROD/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/androidTest/Chef2Share_PROD/debug" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/androidTest/Chef2Share_PROD/debug" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/Chef2Share_PROD/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/Chef2Share_PROD/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/Chef2Share_PROD/assets" type="java-resource" />
@@ -63,13 +63,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src/Chef2Share_PROD/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/Chef2Share_PROD/jni" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/Chef2Share_PROD/rs" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testChef2Share_PROD/res" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testChef2Share_PROD/resources" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testChef2Share_PROD/assets" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testChef2Share_PROD/aidl" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testChef2Share_PROD/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testChef2Share_PROD/jni" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testChef2Share_PROD/rs" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestChef2Share_PROD/res" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestChef2Share_PROD/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestChef2Share_PROD/assets" type="java-test-resource" />
@@ -77,6 +70,13 @@
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestChef2Share_PROD/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestChef2Share_PROD/jni" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestChef2Share_PROD/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testChef2Share_PROD/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testChef2Share_PROD/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testChef2Share_PROD/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testChef2Share_PROD/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testChef2Share_PROD/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testChef2Share_PROD/jni" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testChef2Share_PROD/rs" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/assets" type="java-resource" />
@@ -153,6 +153,7 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/8.3.0/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/8.3.0/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.google.android.gms/play-services/8.3.0/jars" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/2.0.1/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.mcxiaoke.volley/library-aar/1.0.0/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental-classes" />
@@ -174,52 +175,54 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 23 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="gson-2.2.4" level="project" />
     <orderEntry type="library" exported="" name="mediarouter-v7-22.2.0" level="project" />
-    <orderEntry type="library" exported="" name="play-services-location-8.3.0" level="project" />
-    <orderEntry type="library" exported="" name="support-annotations-23.4.0" level="project" />
     <orderEntry type="library" exported="" name="play-services-plus-8.3.0" level="project" />
     <orderEntry type="library" exported="" name="play-services-appindexing-8.3.0" level="project" />
+    <orderEntry type="library" exported="" name="play-services-identity-8.3.0" level="project" />
+    <orderEntry type="library" exported="" name="play-services-analytics-8.3.0" level="project" />
+    <orderEntry type="library" exported="" name="support-v4-23.4.0" level="project" />
+    <orderEntry type="library" exported="" name="cloudinary-core-1.2.2" level="project" />
+    <orderEntry type="library" exported="" name="play-services-8.3.0" level="project" />
+    <orderEntry type="library" exported="" name="cloudinary-android-1.2.2" level="project" />
+    <orderEntry type="library" exported="" name="bolts-android-1.4.0" level="project" />
+    <orderEntry type="library" exported="" name="play-services-cast-8.3.0" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="multidex-instrumentation-1.0.1" level="project" />
+    <orderEntry type="library" exported="" name="play-services-appstate-8.3.0" level="project" />
+    <orderEntry type="library" exported="" name="play-services-games-8.3.0" level="project" />
+    <orderEntry type="library" exported="" name="design-23.0.1" level="project" />
+    <orderEntry type="library" exported="" name="play-services-safetynet-8.3.0" level="project" />
+    <orderEntry type="library" exported="" name="cardview-v7-23.4.0" level="project" />
+    <orderEntry type="library" exported="" name="androidannotations-api-3.3.2" level="project" />
+    <orderEntry type="library" exported="" name="play-services-basement-8.3.0" level="project" />
+    <orderEntry type="library" exported="" name="library-aar-1.0.0" level="project" />
+    <orderEntry type="library" exported="" name="play-services-nearby-8.3.0" level="project" />
+    <orderEntry type="library" exported="" name="bolts-applinks-1.4.0" level="project" />
+    <orderEntry type="library" exported="" name="customtabs-23.4.0" level="project" />
+    <orderEntry type="library" exported="" name="play-services-fitness-8.3.0" level="project" />
+    <orderEntry type="library" exported="" name="gson-2.2.4" level="project" />
+    <orderEntry type="library" exported="" name="play-services-location-8.3.0" level="project" />
+    <orderEntry type="library" exported="" name="support-annotations-23.4.0" level="project" />
     <orderEntry type="library" exported="" name="play-services-auth-8.3.0" level="project" />
     <orderEntry type="library" exported="" name="picasso-2.5.2" level="project" />
     <orderEntry type="library" exported="" name="play-services-wearable-8.3.0" level="project" />
     <orderEntry type="library" exported="" name="play-services-base-8.3.0" level="project" />
     <orderEntry type="library" exported="" name="play-services-measurement-8.3.0" level="project" />
-    <orderEntry type="library" exported="" name="play-services-identity-8.3.0" level="project" />
     <orderEntry type="library" exported="" name="bolts-tasks-1.4.0" level="project" />
     <orderEntry type="library" exported="" name="play-services-vision-8.3.0" level="project" />
     <orderEntry type="library" exported="" name="play-services-wallet-8.3.0" level="project" />
     <orderEntry type="library" exported="" name="recyclerview-v7-23.0.1" level="project" />
-    <orderEntry type="library" exported="" name="play-services-analytics-8.3.0" level="project" />
-    <orderEntry type="library" exported="" name="support-v4-23.4.0" level="project" />
-    <orderEntry type="library" exported="" name="cloudinary-core-1.2.2" level="project" />
-    <orderEntry type="library" exported="" name="play-services-8.3.0" level="project" />
+    <orderEntry type="library" exported="" name="core-3.0.1" level="project" />
     <orderEntry type="library" exported="" name="play-services-drive-8.3.0" level="project" />
-    <orderEntry type="library" exported="" name="cloudinary-android-1.2.2" level="project" />
-    <orderEntry type="library" exported="" name="bolts-android-1.4.0" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-23.0.1" level="project" />
-    <orderEntry type="library" exported="" name="play-services-cast-8.3.0" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="multidex-instrumentation-1.0.1" level="project" />
     <orderEntry type="library" exported="" name="play-services-ads-8.3.0" level="project" />
     <orderEntry type="library" exported="" name="play-services-appinvite-8.3.0" level="project" />
-    <orderEntry type="library" exported="" name="play-services-appstate-8.3.0" level="project" />
     <orderEntry type="library" exported="" name="facebook-android-sdk-4.12.1" level="project" />
-    <orderEntry type="library" exported="" name="play-services-games-8.3.0" level="project" />
-    <orderEntry type="library" exported="" name="design-23.0.1" level="project" />
     <orderEntry type="library" exported="" name="play-services-gcm-8.3.0" level="project" />
-    <orderEntry type="library" exported="" name="play-services-safetynet-8.3.0" level="project" />
-    <orderEntry type="library" exported="" name="cardview-v7-23.4.0" level="project" />
-    <orderEntry type="library" exported="" name="androidannotations-api-3.3.2" level="project" />
-    <orderEntry type="library" exported="" name="play-services-basement-8.3.0" level="project" />
     <orderEntry type="library" exported="" name="play-services-maps-8.3.0" level="project" />
-    <orderEntry type="library" exported="" name="library-aar-1.0.0" level="project" />
     <orderEntry type="library" exported="" name="multidex-1.0.1" level="project" />
-    <orderEntry type="library" exported="" name="play-services-nearby-8.3.0" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="hamcrest-core-1.3" level="project" />
-    <orderEntry type="library" exported="" name="bolts-applinks-1.4.0" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="junit-4.12" level="project" />
-    <orderEntry type="library" exported="" name="customtabs-23.4.0" level="project" />
-    <orderEntry type="library" exported="" name="play-services-fitness-8.3.0" level="project" />
+    <orderEntry type="library" exported="" name="zxing-android-embedded-2.0.1" level="project" />
     <orderEntry type="library" exported="" name="play-services-panorama-8.3.0" level="project" />
     <orderEntry type="module" module-name="android_utils_lib" exported="" />
   </component>

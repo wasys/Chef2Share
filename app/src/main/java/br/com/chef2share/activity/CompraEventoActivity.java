@@ -201,7 +201,7 @@ public class CompraEventoActivity extends SuperActivity  {
         List<Integer> valores = new ArrayList<Integer>();
 
         int quantidade = Integer.parseInt(detalhes.getRestantes());
-        for (int i = 0; i < quantidade; i++){
+        for (int i = 0; i <= quantidade; i++){
             valores.add(i);
         }
 

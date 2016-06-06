@@ -1,1 +1,181 @@
-Address[addressLines=[0:"Cidade Industrial",1:"Curitiba - PR",2:"81170-065",3:"Brasil"],feature=81170-065,admin=Paraná,sub-admin=null,locality=Curitiba,thoroughfare=null,postalCode=81170-065,countryCode=BR,countryName=Brasil,hasLatitude=true,latitude=-25.5105322,hasLongitude=true,longitude=-49.319854,phone=null,url=null,extras=null]
+{
+  "status": "SUCCESS",
+  "cadastro": {
+    "cardapios": [
+      {
+        "id": "66",
+        "tipo": "JANTAR",
+        "titulo": "Parmegiana com arroz e fritas",
+        "descricao": "Batata salsa, arroz, e fritas."
+      }
+    ],
+    "evento": {
+      "id": "529",
+      "status": "RASCUNHO",
+      "passo1": {
+        "id": "1108",
+        "nome": "Meu AP",
+        "descricao": "Lugar aconchegante é com gatos.",
+        "estacionamento": "não tem.",
+        "cep": "82315000",
+        "estado": "Paraná",
+        "cidade": "Curitiba",
+        "bairro": "São Braz",
+        "logradouro": "R. Ângelo Massignan",
+        "numero": 884,
+        "latitude": -25.4112839,
+        "longitude": -49.3527636,
+        "local": {
+          "id": "143",
+          "nome": "Meu AP",
+          "descricao": "Lugar aconchegante é com gatos.",
+          "estacionamento": "não tem.",
+          "cep": "82315000",
+          "estado": "Paraná",
+          "cidade": "Curitiba",
+          "bairro": "São Braz",
+          "logradouro": "R. Ângelo Massignan",
+          "numero": 884,
+          "latitude": -25.4112839,
+          "longitude": -49.3527636,
+          "imagensLocal": [
+            {
+              "id": "326",
+              "imagem": {
+                "id": "529",
+                "url": "http:\/\/res.cloudinary.com\/dqmytkp5f\/image\/upload\/529.jpg",
+                "cloudinary": {
+                  "name": "dqmytkp5f",
+                  "apiKey": "226796523957175",
+                  "apiSecret": "w2xyjER5zyoBkjlRjwg1EmadvLM"
+                }
+              }
+            },
+            {
+              "id": "327",
+              "imagem": {
+                "id": "530",
+                "url": "http:\/\/res.cloudinary.com\/dqmytkp5f\/image\/upload\/530.jpg",
+                "cloudinary": {
+                  "name": "dqmytkp5f",
+                  "apiKey": "226796523957175",
+                  "apiSecret": "w2xyjER5zyoBkjlRjwg1EmadvLM"
+                }
+              }
+            }
+          ]
+        },
+        "imagensPasso1": [
+          {
+            "id": "1146",
+            "imagem": {
+              "id": "529",
+              "url": "http:\/\/res.cloudinary.com\/dqmytkp5f\/image\/upload\/529.jpg",
+              "cloudinary": {
+                "name": "dqmytkp5f",
+                "apiKey": "226796523957175",
+                "apiSecret": "w2xyjER5zyoBkjlRjwg1EmadvLM"
+              }
+            }
+          },
+          {
+            "id": "1147",
+            "imagem": {
+              "id": "530",
+              "url": "http:\/\/res.cloudinary.com\/dqmytkp5f\/image\/upload\/530.jpg",
+              "cloudinary": {
+                "name": "dqmytkp5f",
+                "apiKey": "226796523957175",
+                "apiSecret": "w2xyjER5zyoBkjlRjwg1EmadvLM"
+              }
+            }
+          }
+        ]
+      },
+      "passo2": {
+        "id": "1109",
+        "tipo": "JANTAR",
+        "titulo": "Parmegiana com arroz e fritas",
+        "descricao": "Batata salsa, arroz, e fritas.",
+        "cardapio": {
+          "id": "66",
+          "tipo": "JANTAR",
+          "titulo": "Parmegiana com arroz e fritas",
+          "descricao": "Batata salsa, arroz, e fritas."
+        },
+        "imagensPasso2": [
+          {
+            "id": "910",
+            "principal": false,
+            "divulgacao": false,
+            "imagem": {
+              "id": "531",
+              "url": "http:\/\/res.cloudinary.com\/dqmytkp5f\/image\/upload\/531.jpg",
+              "cloudinary": {
+                "name": "dqmytkp5f",
+                "apiKey": "226796523957175",
+                "apiSecret": "w2xyjER5zyoBkjlRjwg1EmadvLM"
+              }
+            }
+          },
+          {
+            "id": "911",
+            "principal": false,
+            "divulgacao": false,
+            "imagem": {
+              "id": "532",
+              "url": "http:\/\/res.cloudinary.com\/dqmytkp5f\/image\/upload\/532.jpg",
+              "cloudinary": {
+                "name": "dqmytkp5f",
+                "apiKey": "226796523957175",
+                "apiSecret": "w2xyjER5zyoBkjlRjwg1EmadvLM"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "locais": [
+      {
+        "id": "143",
+        "nome": "Meu AP",
+        "descricao": "Lugar aconchegante é com gatos.",
+        "estacionamento": "não tem.",
+        "cep": "82315000",
+        "estado": "Paraná",
+        "cidade": "Curitiba",
+        "bairro": "São Braz",
+        "logradouro": "R. Ângelo Massignan",
+        "numero": 884,
+        "latitude": -25.4112839,
+        "longitude": -49.3527636,
+        "imagensLocal": [
+          {
+            "id": "326",
+            "imagem": {
+              "id": "529",
+              "url": "http:\/\/res.cloudinary.com\/dqmytkp5f\/image\/upload\/529.jpg",
+              "cloudinary": {
+                "name": "dqmytkp5f",
+                "apiKey": "226796523957175",
+                "apiSecret": "w2xyjER5zyoBkjlRjwg1EmadvLM"
+              }
+            }
+          },
+          {
+            "id": "327",
+            "imagem": {
+              "id": "530",
+              "url": "http:\/\/res.cloudinary.com\/dqmytkp5f\/image\/upload\/530.jpg",
+              "cloudinary": {
+                "name": "dqmytkp5f",
+                "apiKey": "226796523957175",
+                "apiSecret": "w2xyjER5zyoBkjlRjwg1EmadvLM"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
