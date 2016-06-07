@@ -73,6 +73,14 @@ public class SuperUtils {
 
     public static String getBase64(File file) {
         Bitmap bm = BitmapFactory.decodeFile(file.getAbsolutePath());
+        if(bm == null){
+            bm = BitmapFactory.decodeFile(file.getAbsolutePath());
+        }
+
+        if(bm == null){
+            return null;
+        }
+
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         bm.compress(Bitmap.CompressFormat.JPEG, 50, baos);
         byte[] b = baos.toByteArray();
