@@ -1,0 +1,4 @@
+C:\Program Files\Java\jre1.8.0_91\bin>keytool -exportcert -alias chef2share -keystore D:\Dev\Wasys\Chef2Share\chef2share.jks | D:\Dev\openssl-0.9.8k_X
+64\bin\openssl sha1 -binary | D:\Dev\openssl-0.9.8k_X64\bin\openssl base64
+Informe a senha da área de armazenamento de chaves:  schwartz
+tw0MrFO8AXGiXM4cwlNM3wwUYu4=

@@ -37,7 +37,7 @@ public class AppUtil {
 	/**
 	 * Modo Fake
 	 */
-	public static boolean FAKE = true;
+	public static boolean FAKE = false;
 
 //-----------------------------------------------------------------------------------------
 	
